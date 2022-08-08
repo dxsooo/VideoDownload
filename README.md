@@ -1,6 +1,6 @@
 # VideoDownload
 
-VideoDownload tool for *Youtube/BiliBili* using Aria2
+VideoDownload tool for *Youtube/BiliBili*
 
 ## Usage
 
@@ -8,8 +8,8 @@ VideoDownload tool for *Youtube/BiliBili* using Aria2
 
 Requirements:
 
-- Aria2
-- Python 3
+- Aria2(for youtube)
+- Python 3.8+
 - Poetry(as package management)
 
 Setup(for normal users):
@@ -26,7 +26,7 @@ python download.py -u <VideoURL>
 
 VideoURL is the video playing url.  
 For Youtube, it should be <https://www.youtube.com/watch?v=xxx>  
-For BiliBili, it should be <https://www.bilibili.com/video/xxxx>
+For BiliBili, it should be <https://www.bilibili.com/video/BVxxxx>
 
 The video is saved in `Downloads/` of the current path.
 
@@ -38,7 +38,7 @@ TODO
 
 TODO
 
-## Develop
+## Contributing
 
 It is welcome to make PR. After cloning, You can start with:
 
@@ -47,4 +47,11 @@ poetry install
 source`poetry env info --path`/bin/activate
 ```
 
-Browse the code freely.
+Browse the code freely with your IDE.
+
+For Youtube, [YT-DLP](https://github.com/yt-dlp/yt-dlp) is used with aria2 as external downloader. For BiliBili, [Bilix](https://github.com/HFrost0/bilix) is used.
+
+## Thanks
+
+- [Bilix](https://github.com/HFrost0/bilix)
+- [YT-DLP](https://github.com/yt-dlp/yt-dlp)
