@@ -9,6 +9,7 @@ VideoDownload tool for *Youtube/BiliBili*
 Requirements:
 
 - Aria2(for youtube)
+- FFmpeg(for bilibili)
 - Python 3.8+
 - Poetry(as package management)
 
@@ -28,13 +29,17 @@ VideoURL is the video playing url.
 For Youtube, it should be <https://www.youtube.com/watch?v=xxx>  
 For BiliBili, it should be <https://www.bilibili.com/video/BVxxxx>
 
-The video is saved in `Downloads/` of the current path.
+The video is saved in `Downloads/` of the current path and named with video id.
 
 ### With Docker
 
-TODO
+```bash
+docker run -v/path/to/save:/app/Downloads dxsooo/video-download:0.1.0 download.py -u <VideoURL>
+```
 
 ## Celery worker mode
+
+<https://www.youtube.com/watch?v=OgshlMMRrMs>
 
 TODO
 

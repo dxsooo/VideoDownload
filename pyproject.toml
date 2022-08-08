@@ -5,7 +5,7 @@ description = ""
 authors = ["dxsooo <zeohan.dxs@gmail.com>"]
 
 [tool.poetry.dependencies]
-python = "^3.10"
+python = "^3.8"
 yt-dlp = "^2022.7.18"
 bilix = "^0.6.13"
 
