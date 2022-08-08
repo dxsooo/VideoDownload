@@ -10,8 +10,8 @@ Requirements:
 
 - Aria2(for youtube)
 - FFmpeg(for bilibili)
-- Python 3.8+
 - Poetry(as package management)
+- Python 3.8+
 
 Setup(for normal users):
 
@@ -33,13 +33,13 @@ The video is saved in `Downloads/` of the current path and named with video id.
 
 ### With Docker
 
+You can easliy download video by docker:
+
 ```bash
 docker run -v/path/to/save:/app/Downloads dxsooo/video-download:0.1.0 download.py -u <VideoURL>
 ```
 
 ## Celery worker mode
-
-<https://www.youtube.com/watch?v=OgshlMMRrMs>
 
 TODO
 
