@@ -1,11 +1,17 @@
 import argparse
 import os
+import re
 import time
 import traceback
 
 import yt_dlp
 
 DOWNLOAD_DIR = "./Downloads"
+
+re_pattern = {
+    "Youtube": "^https:\/\/www.youtube.com\/watch\?v=[a-zA-z0-9\-]+$",
+    "BiliBili": "",
+}
 
 ydl_opts = {
     "format": "best",
@@ -35,9 +41,12 @@ def parse_args():
 
 if __name__ == "__main__":
     args = parse_args()
-
     os.makedirs(DOWNLOAD_DIR, exist_ok=True)
-    ydl_opts["outtmpl"] = os.path.join(DOWNLOAD_DIR, "%(id)s.%(ext)s")
 
-    with yt_dlp.YoutubeDL(ydl_opts) as ydl:
-        download_youtube(args.url, ydl)
+    if re.match(re_pattern["Youtube"], args.url):
+        ydl_opts["outtmpl"] = os.path.join(DOWNLOAD_DIR, "%(id)s.%(ext)s")
+
+        with yt_dlp.YoutubeDL(ydl_opts) as ydl:
+            download_youtube(args.url, ydl)
+    else:
+        print("Invalid video url")
