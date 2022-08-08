@@ -4,6 +4,8 @@ VideoDownload tool for *Youtube/BiliBili* using Aria2
 
 ## Usage
 
+### With source code
+
 Requirements:
 
 - Aria2
@@ -19,7 +21,7 @@ poetry export -f requirements.txt | pip install -r /dev/stdin
 Run:
 
 ```bash
-python download.py <VideoURL>
+python download.py -u <VideoURL>
 ```
 
 VideoURL is the video playing url.  
@@ -30,12 +32,19 @@ The video is saved in `Downloads/` of the current path.
 
 ### With Docker
 
+TODO
+
+## Celery worker mode
+
+TODO
+
 ## Develop
 
 It is welcome to make PR. After cloning, You can start with:
 
 ```bash
 poetry install
+source`poetry env info --path`/bin/activate
 ```
 
 Browse the code freely.
