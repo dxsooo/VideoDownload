@@ -9,7 +9,7 @@ import traceback
 import bilix
 import yt_dlp
 
-DOWNLOAD_DIR = "./Downloads"
+DOWNLOAD_DIR = "./videos"
 
 re_pattern = {
     "Youtube": "^https:\/\/www.youtube.com\/watch\?v=[a-zA-z0-9\-]+$",
