@@ -38,7 +38,7 @@ def download_youtube(url, ydl):
 
 async def download_bilibili(url, bdl):
     # get bvid from url to rename later
-    name = re.search(r"BV([a-zA-z0-9]+)$", url).group(1)
+    name = re.search(r"(BV[a-zA-z0-9]+)$", url).group(0)
     co = bdl.get_video(url, add_name=name)
     await asyncio.gather(co)
     os.rename(

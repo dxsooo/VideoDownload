@@ -36,7 +36,7 @@ The video is saved in `Downloads/` of the current path and named with video id.
 You can easliy download video by docker:
 
 ```bash
-docker run -v/path/to/save:/app/Downloads dxsooo/video-download:0.1.0 download.py -u <VideoURL>
+docker run -t -v/path/to/save:/app/Downloads dxsooo/video-download:0.1.0 download.py -u <VideoURL>
 ```
 
 ## Celery worker mode
