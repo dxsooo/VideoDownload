@@ -45,7 +45,7 @@ docker run -t -v/path/to/save:/app/Downloads dxsooo/video-download:0.1.0 downloa
 
 ## Celery worker mode
 
-VideoDownload can also work as a Celery worker that receive download jobs. It is recommended to use by docker:
+VideoDownload can also work as a Celery worker that receive download tasks. It is recommended to use by docker:
 
 ```bash
 docker run -d --name video-downloader-1 \
@@ -55,13 +55,13 @@ docker run -d --name video-downloader-1 \
     dxsooo/video-download:0.2.0 celery_worker.py
 ```
 
-And then you can send job by one of the following methods:
+And then you can send task by one of the following methods:
 
 ### 1.use RabbitMQ admin page
 
-Supposing RabbitMQ is used as broker, you can send job on its admin page after login:
+Supposing RabbitMQ is used as broker, you can send task on its admin page after login:
 
-### 2.use
+### 2.use REST API from celery flower
 
 For all brokers, it is a general method
 
@@ -79,14 +79,14 @@ For Youtube, [YT-DLP](https://github.com/yt-dlp/yt-dlp) is used with aria2 as ex
 If you need to work with Celery mode, you can start with:
 
 ```bash
-poetry install
+poetry install -E celery
 ```
 
 And there are scripts(docker compose is needed) in `./devenv` that help to create local environment for broker(RabbitMQ) and result backend(MongoDB):
 
 ```bash
 cd devenv
-./setup.sh
+./start.sh
 ```
 
 > Create/edit `.env` file if you want to use external broker or backend
@@ -100,7 +100,7 @@ celery -A celery_worker worker --loglevel=INFO
 In addition to the methods described in [Celery worker mode](#Celery-worker-mode), you can send jobs by:
 
 ```bash
-python send_celery_job.py
+python send_celery_task.py
 ```
 
 ## Thanks
