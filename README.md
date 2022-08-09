@@ -49,9 +49,9 @@ VideoDownload can also work as a Celery worker that receive download jobs. It is
 
 ```bash
 docker run -d --name video-downloader-1 \
-    -eBROKER= \
-    -eRESULT_URL= \
-    -v/path/to/save:/app/videos \
+    -e BROKER=${YOUR_CELERY_BROKER} \
+    -e BACKEND=${YOUR_CELERY_BACKEND} \
+    -v /path/to/save:/app/videos \
     dxsooo/video-download:0.2.0 celery_worker.py
 ```
 
@@ -59,7 +59,7 @@ And then you can send job by one of the following methods:
 
 ### 1.use RabbitMQ admin page
 
-Supposing RabbitMQ is used as BROKER, you can send job on its admin page after login:
+Supposing RabbitMQ is used as broker, you can send job on its admin page after login:
 
 ### 2.use
 
@@ -82,19 +82,19 @@ If you need to work with Celery mode, you can start with:
 poetry install
 ```
 
-And there are scripts(docker compose is needed) in `./devenv` that help to create local environment for broker(RabbitMQ) and result storage(MongoDB):
+And there are scripts(docker compose is needed) in `./devenv` that help to create local environment for broker(RabbitMQ) and result backend(MongoDB):
 
 ```bash
 cd devenv
 ./setup.sh
 ```
 
-> Edit .env file if you want to use external broker or storage
+> Create/edit `.env` file if you want to use external broker or backend
 
 Run the worker with:
 
 ```bash
-python celery_worker.py
+celery -A celery_worker worker --loglevel=INFO
 ```
 
 In addition to the methods described in [Celery worker mode](#Celery-worker-mode), you can send jobs by:
