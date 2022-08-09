@@ -94,7 +94,7 @@ cd devenv
 Run the worker with:
 
 ```bash
-celery -A celery_worker worker --loglevel=INFO
+celery -A celery_worker worker
 ```
 
 In addition to the methods described in [Celery worker mode](#Celery-worker-mode), you can send jobs by:
