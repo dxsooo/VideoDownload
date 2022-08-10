@@ -13,7 +13,7 @@ RUN apt-get -qq update && \
 
 # app
 COPY pyproject.toml poetry.lock ./
-RUN poetry export --without-hashes --extras -f requirements.txt | pip install -r /dev/stdin
+RUN poetry export --without-hashes --extras celery -f requirements.txt | pip install -r /dev/stdin
 
 WORKDIR /app
 COPY *.py ./

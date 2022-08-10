@@ -25,3 +25,4 @@ def download(url: str):
         download_bilibili_video(url)
     else:
         raise Exception("Invalid video url")
+    return {"source": url}

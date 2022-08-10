@@ -52,7 +52,7 @@ docker run -d --name video-downloader-1 \
     -e BROKER=${YOUR_CELERY_BROKER} \
     -e BACKEND=${YOUR_CELERY_BACKEND} \
     -v /path/to/save:/app/videos \
-    --entrypoint=celery
+    --entrypoint=celery \
     dxsooo/video-download:0.2.0 -A celery_worker worker
 ```
 
@@ -72,8 +72,8 @@ Start flower by:
 docker run -d --name video-downloader-flower \
     -e BROKER=${YOUR_CELERY_BROKER} \
     -e BACKEND=${YOUR_CELERY_BACKEND} \
-    --entrypoint=celery
-    -p 5555:5555
+    --entrypoint=celery \
+    -p 5555:5555 \
     dxsooo/video-download:0.2.0 -A celery_worker flower
 ```
 
