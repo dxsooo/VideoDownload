@@ -24,4 +24,4 @@ def download(url: str):
     elif is_bilibili_video(url):
         download_bilibili_video(url)
     else:
-        return None
+        raise Exception("Invalid video url")

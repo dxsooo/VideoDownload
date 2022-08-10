@@ -52,7 +52,8 @@ docker run -d --name video-downloader-1 \
     -e BROKER=${YOUR_CELERY_BROKER} \
     -e BACKEND=${YOUR_CELERY_BACKEND} \
     -v /path/to/save:/app/videos \
-    dxsooo/video-download:0.2.0 celery_worker.py
+    --entrypoint=celery
+    dxsooo/video-download:0.2.0 -A celery_worker worker
 ```
 
 And then you can send task by one of the following methods:
@@ -63,7 +64,18 @@ Supposing RabbitMQ is used as broker, you can send task on its admin page after 
 
 ### 2.use REST API from celery flower
 
-For all brokers, it is a general method
+For all brokers, it is a general method.
+
+Start flower by:
+
+```bash
+docker run -d --name video-downloader-flower \
+    -e BROKER=${YOUR_CELERY_BROKER} \
+    -e BACKEND=${YOUR_CELERY_BACKEND} \
+    --entrypoint=celery
+    -p 5555:5555
+    dxsooo/video-download:0.2.0 -A celery_worker flower
+```
 
 ## Contributing
 
@@ -95,6 +107,12 @@ Run the worker with:
 
 ```bash
 celery -A celery_worker worker
+```
+
+Start the flower with:
+
+```bash
+celery -A celery_worker flower
 ```
 
 In addition to the methods described in [Celery worker mode](#Celery-worker-mode), you can send jobs by:
