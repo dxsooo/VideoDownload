@@ -5,18 +5,15 @@ import re
 
 import bilix
 
-from config import DOWNLOAD_DIR
-
 
 def is_bilibili_video(url: str) -> bool:
     return None != re.match("^https:\/\/www.bilibili.com\/video\/BV[a-zA-z0-9]+$", url)
 
 
-def download_bilibili_video(url: str):
+def download_bilibili_video(url: str, dir: str):
+    os.makedirs(dir, exist_ok=True)
     asyncio.run(
-        download_bilibili(
-            url, bilix.Downloader(part_concurrency=10, videos_dir=DOWNLOAD_DIR)
-        )
+        download_bilibili(url, bilix.Downloader(part_concurrency=10, videos_dir=dir))
     )
 
 

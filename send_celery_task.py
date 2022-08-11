@@ -1,4 +1,5 @@
 from celery_worker import download
+from config import DOWNLOAD_DIR
 
 test_urls = [
     # "https://www.youtube.com/watch?v=sHFsq-BIhWs",
@@ -9,4 +10,5 @@ test_urls = [
 
 if __name__ == "__main__":
     for i in test_urls:
-        download.delay(i)
+        download.delay(i, DOWNLOAD_DIR)
+        # download.delay(i)

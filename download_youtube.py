@@ -5,8 +5,6 @@ import traceback
 
 import yt_dlp
 
-from config import DOWNLOAD_DIR
-
 ydl_opts = {
     "format": "best",
     "outtmpl": "",
@@ -20,8 +18,9 @@ def is_youtube_video(url: str) -> bool:
     return None != re.match("^https:\/\/www.youtube.com\/watch\?v=[a-zA-z0-9\-]+$", url)
 
 
-def download_youtube_video(url: str):
-    ydl_opts["outtmpl"] = os.path.join(DOWNLOAD_DIR, "%(id)s.%(ext)s")
+def download_youtube_video(url: str, dir: str):
+    os.makedirs(dir, exist_ok=True)
+    ydl_opts["outtmpl"] = os.path.join(dir, "%(id)s.%(ext)s")
     with yt_dlp.YoutubeDL(ydl_opts) as ydl:
         download_youtube(url, ydl)
 

@@ -35,6 +35,18 @@ For BiliBili, it should be <https://www.bilibili.com/video/BVxxxx>
 
 The video is saved in `videos/` of the current path and named with video id.
 
+There are more options:
+
+```bash
+% python download.py --help
+usage: download.py [-h] -u URL [-d DIR]
+
+options:
+  -h, --help         show this help message and exit
+  -u URL, --url URL  video playing url
+  -d DIR, --dir DIR  video save directory
+```
+
 #### With Docker
 
 You can easily download video by docker:

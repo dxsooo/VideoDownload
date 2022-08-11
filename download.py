@@ -9,17 +9,20 @@ from download_youtube import download_youtube_video, is_youtube_video
 def parse_args():
     parser = argparse.ArgumentParser()
     parser.add_argument("-u", "--url", required=True, help="video playing url")
+    parser.add_argument(
+        "-d", "--dir", default=DOWNLOAD_DIR, help="video save directory"
+    )
     return parser.parse_args()
 
 
 if __name__ == "__main__":
     args = parse_args()
-    os.makedirs(DOWNLOAD_DIR, exist_ok=True)
-
+    dir = args.dir
     url = args.url
+
     if is_youtube_video(url):
-        download_youtube_video(url)
+        download_youtube_video(url, dir)
     elif is_bilibili_video(url):
-        download_bilibili_video(url)
+        download_bilibili_video(url, dir)
     else:
         print("Invalid video url")
