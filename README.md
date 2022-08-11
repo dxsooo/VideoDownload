@@ -128,13 +128,13 @@ Run the worker with:
 celery -A celery_worker worker
 ```
 
-Start the flower with:
+Start flower(<http://localhost:5555>) with:
 
 ```bash
 celery -A celery_worker flower
 ```
 
-In addition to the methods described in [Celery worker mode](#Celery-worker-mode), you can send jobs by:
+In addition to the methods described in [Celery worker mode](#Celery-worker-mode), you can send tasks by:
 
 ```bash
 python send_celery_task.py
