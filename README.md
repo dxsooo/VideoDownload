@@ -57,7 +57,7 @@ docker run -t -v/path/to/save:/app/videos dxsooo/video-download:0.2.0 download.p
 
 ### Celery worker mode
 
-VideoDownload can also work as a Celery worker that receive download tasks, making it possible and convenient to deploy in distribute system and integrate with cloud-native services.
+VideoDownload can also work as a [Celery](https://docs.celeryq.dev/en/stable/index.html) worker that receive download tasks, making it possible and convenient to deploy in distribute system and integrate with cloud-native services.
 
 It is recommended to use by docker:
 
@@ -67,7 +67,7 @@ docker run -d --name video-downloader-1 \
     -e BACKEND=${YOUR_CELERY_BACKEND} \
     -v /path/to/save:/app/videos \
     --entrypoint=celery \
-    dxsooo/video-download:0.2.0 -A celery_worker worker
+    dxsooo/video-download:0.2.0 -A celery_worker worker -c 4
 ```
 
 And then you can send task by one of the following methods:
@@ -107,6 +107,8 @@ Host: localhost:5555
     "args": ["<VideoURL>"]
 }
 ```
+
+> if you want to use custom queue instead of the default `celery`, refer <https://github.com/mher/flower/issues/456>
 
 ## Contributing
 

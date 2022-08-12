@@ -12,3 +12,4 @@ if __name__ == "__main__":
     for i in test_urls:
         download.delay(i, DOWNLOAD_DIR)
         # download.delay(i)
+        # download.apply_async((i, DOWNLOAD_DIR), queue="youtube")
