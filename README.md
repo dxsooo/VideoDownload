@@ -31,7 +31,7 @@ python download.py -u <VideoURL>
 
 VideoURL is the video playing url.  
 For Youtube, it should be <https://www.youtube.com/watch?v=xxx>  
-For BiliBili, it should be <https://www.bilibili.com/video/BVxxxx>
+For BiliBili, it should be <https://www.bilibili.com/video/BVxxxx> or <https://www.bilibili.com/video/avxxxx>
 
 The video is saved in `videos/` of the current path and named with video id.
 
@@ -108,7 +108,7 @@ Host: localhost:5555
 }
 ```
 
-> if you want to use custom queue instead of the default `celery`, refer <https://github.com/mher/flower/issues/456>
+> if you want to use custom queue instead of the default `celery`, start worker with `-Q <queue>`, and send request refer <https://github.com/mher/flower/issues/456>
 
 ## Contributing
 

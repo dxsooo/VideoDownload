@@ -7,7 +7,10 @@ import bilix
 
 
 def is_bilibili_video(url: str) -> bool:
-    return None != re.match("^https:\/\/www.bilibili.com\/video\/BV[a-zA-z0-9]+$", url)
+    if None != re.match("^https:\/\/www.bilibili.com\/video\/BV[a-zA-z0-9]+$", url):
+        return True
+    else:
+        return None != re.match("^http:\/\/www.bilibili.com\/video\/av[0-9]+$", url)
 
 
 def download_bilibili_video(url: str, dir: str):
@@ -17,9 +20,17 @@ def download_bilibili_video(url: str, dir: str):
     )
 
 
+def get_id(url: str) -> str:
+    se = re.search(r"(BV[a-zA-z0-9]+)$", url)
+    if se != None:
+        return se.group(0)
+    else:
+        return re.search(r"(av[0-9]+)$", url).group(0)
+
+
 async def download_bilibili(url, bdl):
-    # get bvid from url to rename later
-    name = re.search(r"(BV[a-zA-z0-9]+)$", url).group(0)
+    # get bvid/avid from url to rename later
+    name = get_id(url)
     co = bdl.get_video(url, add_name=name)
     await asyncio.gather(co)
     os.rename(
