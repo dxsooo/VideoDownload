@@ -31,7 +31,7 @@ python download.py -u <VideoURL>
 
 VideoURL is the video playing url.  
 For Youtube, it should be <https://www.youtube.com/watch?v=xxx>  
-For BiliBili, it should be <https://www.bilibili.com/video/BVxxxx> or <https://www.bilibili.com/video/avxxxx>
+For BiliBili, it should be <https://www.bilibili.com/video/BVxxxx> or <http://www.bilibili.com/video/avxxxx>
 
 The video is saved in `videos/` of the current path and named with video id.
 
