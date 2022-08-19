@@ -32,8 +32,8 @@ async def download_bilibili(url, bdl):
     # get bvid/avid from url to rename later
     name = get_id(url)
     co = bdl.get_video(url, add_name=name)
-    await asyncio.gather(co)
     try:
+        await asyncio.gather(co)
         out_vs = glob.glob(os.path.join(bdl.videos_dir, "*-" + name + ".mp4"))
         if len(out_vs) == 0:
             raise Exception(f"Failed to get video in {url}")
