@@ -629,12 +629,12 @@ pycryptodomex = "*"
 websockets = "*"
 
 [extras]
-celery = ["python-dotenv", "celery", "pymongo", "flower", "protobuf"]
+celery = ["python-dotenv", "celery", "pymongo", "flower"]
 
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.8"
-content-hash = "f479ca4bdb40d74f7f5d6830325cab4132615386df5bac9e242820d5216ad24c"
+content-hash = "be2cd3710d06503c8acddd7af458980e3b94d8160fb531fea43d60d082e03803"
 
 [metadata.files]
 amqp = [
