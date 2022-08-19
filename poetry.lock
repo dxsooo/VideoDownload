@@ -352,7 +352,7 @@ python-versions = ">=3.5"
 
 [[package]]
 name = "json5"
-version = "0.9.9"
+version = "0.9.10"
 description = "A Python implementation of the JSON5 data format."
 category = "main"
 optional = false
@@ -449,7 +449,7 @@ wcwidth = "*"
 
 [[package]]
 name = "protobuf"
-version = "4.21.4"
+version = "4.21.5"
 description = ""
 category = "main"
 optional = false
@@ -473,11 +473,14 @@ python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*, !=3.4.*"
 
 [[package]]
 name = "pygments"
-version = "2.12.0"
+version = "2.13.0"
 description = "Pygments is a syntax highlighting package written in Python."
 category = "main"
 optional = false
 python-versions = ">=3.6"
+
+[package.extras]
+plugins = ["importlib-metadata"]
 
 [[package]]
 name = "pymongo"
@@ -509,7 +512,7 @@ cli = ["click (>=5.0)"]
 
 [[package]]
 name = "pytz"
-version = "2022.1"
+version = "2022.2.1"
 description = "World timezone definitions, modern and historical"
 category = "main"
 optional = true
@@ -611,11 +614,11 @@ python-versions = ">=3.7"
 
 [[package]]
 name = "yt-dlp"
-version = "2022.7.18"
+version = "2022.8.19"
 description = "A youtube-dl fork with additional features and patches"
 category = "main"
 optional = false
-python-versions = ">=3.6"
+python-versions = ">=3.7"
 
 [package.dependencies]
 brotli = {version = "*", markers = "platform_python_implementation == \"CPython\""}
@@ -631,7 +634,7 @@ celery = ["python-dotenv", "celery", "pymongo", "flower", "protobuf"]
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.8"
-content-hash = "af86c5c53dcb37958a2817864089380ae625a5f636d455233d6c5ca41c62e48d"
+content-hash = "f479ca4bdb40d74f7f5d6830325cab4132615386df5bac9e242820d5216ad24c"
 
 [metadata.files]
 amqp = [
@@ -910,8 +913,8 @@ idna = [
     {file = "idna-3.3.tar.gz", hash = "sha256:9d643ff0a55b762d5cdb124b8eaa99c66322e2157b69160bc32796e824360e6d"},
 ]
 json5 = [
-    {file = "json5-0.9.9-py2.py3-none-any.whl", hash = "sha256:1ff8351ee2ae80fd89d64210d9522db7e157516a7b12c72089ded6964527283f"},
-    {file = "json5-0.9.9.tar.gz", hash = "sha256:2ace77117c068c5f1f23f97e530a0d49bc09a46039521b6daa74aa39524e02a2"},
+    {file = "json5-0.9.10-py2.py3-none-any.whl", hash = "sha256:993189671e7412e9cdd8be8dc61cf402e8e579b35f1d1bb20ae6b09baa78bbce"},
+    {file = "json5-0.9.10.tar.gz", hash = "sha256:ad9f048c5b5a4c3802524474ce40a622fae789860a86f10cc4f7e5f9cf9b46ab"},
 ]
 kombu = [
     {file = "kombu-5.2.4-py3-none-any.whl", hash = "sha256:8b213b24293d3417bcf0d2f5537b7f756079e3ea232a8386dcc89a59fd2361a4"},
@@ -942,20 +945,20 @@ prompt-toolkit = [
     {file = "prompt_toolkit-3.0.30.tar.gz", hash = "sha256:859b283c50bde45f5f97829f77a4674d1c1fcd88539364f1b28a37805cfd89c0"},
 ]
 protobuf = [
-    {file = "protobuf-4.21.4-cp310-abi3-win32.whl", hash = "sha256:e113f3d1629cebc911b107ce704f1a17d7e1589efef5c498e202bd47df223955"},
-    {file = "protobuf-4.21.4-cp310-abi3-win_amd64.whl", hash = "sha256:cb50d93ef748671b7e2537658869e00aaa8175d717d8e73a23fcd58842883229"},
-    {file = "protobuf-4.21.4-cp37-abi3-macosx_10_9_universal2.whl", hash = "sha256:142ef5d73d6cd1bd8ab539d7d73c3722f31d33e64914e01bb91439cfcef11a9f"},
-    {file = "protobuf-4.21.4-cp37-abi3-manylinux2014_aarch64.whl", hash = "sha256:47b7cf3e542fd50a3a7c24d0da13451bc362a32c0a9b905714942ea8cf35fa11"},
-    {file = "protobuf-4.21.4-cp37-abi3-manylinux2014_x86_64.whl", hash = "sha256:adeccfbffbf4c9d1e77da86dc995d76c837d01387e412066cc803ad037000892"},
-    {file = "protobuf-4.21.4-cp37-cp37m-win32.whl", hash = "sha256:5e47947fbfefd5a1bdc7c28eea1d197ea6dba5812789c2429667831a55ef71b7"},
-    {file = "protobuf-4.21.4-cp37-cp37m-win_amd64.whl", hash = "sha256:d9b0398ff68017015ec2a37fb0ab390363a654362b15ca2e4543d3c82587768f"},
-    {file = "protobuf-4.21.4-cp38-cp38-win32.whl", hash = "sha256:2ea8c841cc6422aea07d0f4f71f0e5e6e130de9a4b6c31a53b9d2a41a75f2d54"},
-    {file = "protobuf-4.21.4-cp38-cp38-win_amd64.whl", hash = "sha256:a8119c029c60cf29b7eea5a9f56648482388e874611243f41cd10aff0a0e5461"},
-    {file = "protobuf-4.21.4-cp39-cp39-win32.whl", hash = "sha256:0275902f8292039d4a022319d3f86e8b231ac4c51d7be4cb797890fb78c16b85"},
-    {file = "protobuf-4.21.4-cp39-cp39-win_amd64.whl", hash = "sha256:5b95c5f515334dd3a811762e3c588b469bf39d4ee7b7f47ac1e0c41dc73809f7"},
-    {file = "protobuf-4.21.4-py2.py3-none-any.whl", hash = "sha256:fd62b6eda64e199b5da651d6be42af2aa8e30805961af1fc5f70292affca78e3"},
-    {file = "protobuf-4.21.4-py3-none-any.whl", hash = "sha256:7e51f6244e53e936abadf624ab3a0f06dc106b27473997374fbb34e6b2eb1e60"},
-    {file = "protobuf-4.21.4.tar.gz", hash = "sha256:5783dc0d6edae631145337fabb18503b4f77274f94cdd22a4b26b9fe5029e718"},
+    {file = "protobuf-4.21.5-cp310-abi3-win32.whl", hash = "sha256:5310cbe761e87f0c1decce019d23f2101521d4dfff46034f8a12a53546036ec7"},
+    {file = "protobuf-4.21.5-cp310-abi3-win_amd64.whl", hash = "sha256:e5c5a2886ae48d22a9d32fbb9b6636a089af3cd26b706750258ce1ca96cc0116"},
+    {file = "protobuf-4.21.5-cp37-abi3-macosx_10_9_universal2.whl", hash = "sha256:ee04f5823ed98bb9a8c3b1dc503c49515e0172650875c3f76e225b223793a1f2"},
+    {file = "protobuf-4.21.5-cp37-abi3-manylinux2014_aarch64.whl", hash = "sha256:b04484d6f42f48c57dd2737a72692f4c6987529cdd148fb5b8e5f616862a2e37"},
+    {file = "protobuf-4.21.5-cp37-abi3-manylinux2014_x86_64.whl", hash = "sha256:5e0b272217aad8971763960238c1a1e6a65d50ef7824e23300da97569a251c55"},
+    {file = "protobuf-4.21.5-cp37-cp37m-win32.whl", hash = "sha256:5eb0724615e90075f1d763983e708e1cef08e66b1891d8b8b6c33bc3b2f1a02b"},
+    {file = "protobuf-4.21.5-cp37-cp37m-win_amd64.whl", hash = "sha256:011c0f267e85f5d73750b6c25f0155d5db1e9443cd3590ab669a6221dd8fcdb0"},
+    {file = "protobuf-4.21.5-cp38-cp38-win32.whl", hash = "sha256:7b6f22463e2d1053d03058b7b4ceca6e4ed4c14f8c286c32824df751137bf8e7"},
+    {file = "protobuf-4.21.5-cp38-cp38-win_amd64.whl", hash = "sha256:b52e7a522911a40445a5f588bd5b5e584291bfc5545e09b7060685e4b2ff814f"},
+    {file = "protobuf-4.21.5-cp39-cp39-win32.whl", hash = "sha256:a7faa62b183d6a928e3daffd06af843b4287d16ef6e40f331575ecd236a7974d"},
+    {file = "protobuf-4.21.5-cp39-cp39-win_amd64.whl", hash = "sha256:5e0ce02418ef03d7657a420ae8fd6fec4995ac713a3cb09164e95f694dbcf085"},
+    {file = "protobuf-4.21.5-py2.py3-none-any.whl", hash = "sha256:bf711b451212dc5b0fa45ae7dada07d8e71a4b0ff0bc8e4783ee145f47ac4f82"},
+    {file = "protobuf-4.21.5-py3-none-any.whl", hash = "sha256:3ec6f5b37935406bb9df9b277e79f8ed81d697146e07ef2ba8a5a272fb24b2c9"},
+    {file = "protobuf-4.21.5.tar.gz", hash = "sha256:eb1106e87e095628e96884a877a51cdb90087106ee693925ec0a300468a9be3a"},
 ]
 pycparser = [
     {file = "pycparser-2.21-py2.py3-none-any.whl", hash = "sha256:8ee45429555515e1f6b185e78100aea234072576aa43ab53aefcae078162fca9"},
@@ -994,8 +997,8 @@ pycryptodomex = [
     {file = "pycryptodomex-3.15.0.tar.gz", hash = "sha256:7341f1bb2dadb0d1a0047f34c3a58208a92423cdbd3244d998e4b28df5eac0ed"},
 ]
 pygments = [
-    {file = "Pygments-2.12.0-py3-none-any.whl", hash = "sha256:dc9c10fb40944260f6ed4c688ece0cd2048414940f1cea51b8b226318411c519"},
-    {file = "Pygments-2.12.0.tar.gz", hash = "sha256:5eb116118f9612ff1ee89ac96437bb6b49e8f04d8a13b514ba26f620208e26eb"},
+    {file = "Pygments-2.13.0-py3-none-any.whl", hash = "sha256:f643f331ab57ba3c9d89212ee4a2dabc6e94f117cf4eefde99a0574720d14c42"},
+    {file = "Pygments-2.13.0.tar.gz", hash = "sha256:56a8508ae95f98e2b9bdf93a6be5ae3f7d8af858b43e02c5a2ff083726be40c1"},
 ]
 pymongo = [
     {file = "pymongo-4.2.0-cp310-cp310-macosx_10_9_universal2.whl", hash = "sha256:1c81414b706627f15e921e29ae2403aab52e33e36ed92ed989c602888d7c3b90"},
@@ -1070,8 +1073,8 @@ python-dotenv = [
     {file = "python_dotenv-0.20.0-py3-none-any.whl", hash = "sha256:d92a187be61fe482e4fd675b6d52200e7be63a12b724abbf931a40ce4fa92938"},
 ]
 pytz = [
-    {file = "pytz-2022.1-py2.py3-none-any.whl", hash = "sha256:e68985985296d9a66a881eb3193b0906246245294a881e7c8afe623866ac6a5c"},
-    {file = "pytz-2022.1.tar.gz", hash = "sha256:1e760e2fe6a8163bc0b3d9a19c4f84342afa0a2affebfaa84b01b978a02ecaa7"},
+    {file = "pytz-2022.2.1-py2.py3-none-any.whl", hash = "sha256:220f481bdafa09c3955dfbdddb7b57780e9a94f5127e35456a48589b9e0c0197"},
+    {file = "pytz-2022.2.1.tar.gz", hash = "sha256:cea221417204f2d1a2aa03ddae3e867921971d0d76f14d87abb4414415bbdcf5"},
 ]
 rfc3986 = [
     {file = "rfc3986-1.5.0-py2.py3-none-any.whl", hash = "sha256:a86d6e1f5b1dc238b218b012df0aa79409667bb209e58da56d0b94704e712a97"},
@@ -1169,6 +1172,6 @@ websockets = [
     {file = "websockets-10.3.tar.gz", hash = "sha256:fc06cc8073c8e87072138ba1e431300e2d408f054b27047d047b549455066ff4"},
 ]
 yt-dlp = [
-    {file = "yt-dlp-2022.7.18.tar.gz", hash = "sha256:0e7b81fc6ac8d1b7d3fffa79f9044ca4163784422582c9a3593305da2a69ec02"},
-    {file = "yt_dlp-2022.7.18-py2.py3-none-any.whl", hash = "sha256:d7d1f81d230756f094b4d9ee59b37b2c13b2e63ff5fb72cda53625edb072cdae"},
+    {file = "yt-dlp-2022.8.19.tar.gz", hash = "sha256:cc290ac8a1fec626841765fed12f7a1ebdfe01791ae5c5f3794edfce35d81843"},
+    {file = "yt_dlp-2022.8.19-py2.py3-none-any.whl", hash = "sha256:a01d3c7187683ec17db33ecd3b506436c7e94c5693002f059f76d32fb437083e"},
 ]
