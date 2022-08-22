@@ -1,7 +1,6 @@
 import os
 import re
 import time
-import traceback
 
 import yt_dlp
 
@@ -26,11 +25,14 @@ def download_youtube_video(url: str, dir: str):
 
 
 def download_youtube(url, ydl):
-    for retry in range(3):
+    try_times = 3
+    for retry in range(try_times):
         try:
             ydl.download([url])
             break
-        except Exception as e:
-            traceback.print_exc()
-            print("retry in 2 seconds")
-            time.sleep(2)
+        except:
+            if retry == try_times - 1:
+                raise
+            else:
+                print("retry in 2 seconds")
+                time.sleep(2)
