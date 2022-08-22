@@ -14,7 +14,9 @@ ydl_opts = {
 
 
 def is_youtube_video(url: str) -> bool:
-    return None != re.match("^https:\/\/www.youtube.com\/watch\?v=[a-zA-z0-9\-]+$", url)
+    return None != re.match(
+        "^https:\/\/www.youtube.com\/watch\?v=[A-Za-z0-9_\-]+$", url
+    )
 
 
 def download_youtube_video(url: str, dir: str):
