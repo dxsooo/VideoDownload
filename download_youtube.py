@@ -9,7 +9,7 @@ ydl_opts = {
     "format": "best",
     "outtmpl": "",
     "external_downloader": "aria2c",
-    "external_downloader_args": ["-x16", "-c"],
+    "external_downloader_args": ["-x16", "-c", "--file-allocation=none"],
     "merge_output_format": "mp4",
 }
 
