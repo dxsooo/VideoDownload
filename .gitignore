@@ -162,3 +162,4 @@ cython_debug/
 .vscode/
 videos/
 devenv/data/
+**/*.mp4
