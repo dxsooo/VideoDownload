@@ -1,5 +1,10 @@
 # VideoDownload
 
+[![GitHub](https://img.shields.io/github/license/dxsooo/VideoDownload)](./LICENSE)
+[![GitHub release (latest by date)](https://img.shields.io/github/v/release/dxsooo/VideoDownload?display_name=tag)](https://github.com/dxsooo/VideoDownload/releases/latest)
+[![Docker Pulls](https://img.shields.io/docker/pulls/dxsooo/video-download?logo=docker)](https://hub.docker.com/repository/docker/dxsooo/video-download)
+<!-- [![GitHub all releases](https://img.shields.io/github/downloads/dxsooo/VideoDownload/total)]((https://github.com/dxsooo/VideoDownload/releases/latest)) -->
+
 VideoDownload tool for *Youtube/BiliBili*
 
 ## Usage
