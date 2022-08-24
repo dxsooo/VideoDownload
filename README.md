@@ -10,12 +10,12 @@ VideoDownload tool for *Youtube/BiliBili*
 
 Requirements:
 
-- Aria2(for youtube)
-- FFmpeg(for bilibili)
-- Poetry(as package management)
+- Aria2 (for Youtube)
+- FFmpeg (for BiliBili)
+- Poetry (as package management)
 - Python 3.8+
 
-Setup(for normal users, developers refer [Contributing](#Contributing)):
+Setup (for normal users, developers refer [Contributing](#Contributing)):
 
 ```bash
 git clone https://github.com/dxsooo/VideoDownload.git
@@ -57,7 +57,7 @@ docker run -t -v/path/to/save:/app/videos dxsooo/video-download:0.2.4 download.p
 
 ### Celery worker mode
 
-VideoDownload can also work as a [Celery](https://docs.celeryq.dev/en/stable/index.html) worker that receive download tasks, making it possible and convenient to deploy in distribute system and integrate with cloud-native services.
+VideoDownload can also work as a [Celery](https://docs.celeryq.dev/en/stable/index.html) worker that receive download tasks, making it possible and convenient to deploy in distribute systems and integrate with cloud-native services.
 
 It is recommended to use by docker:
 
@@ -69,6 +69,8 @@ docker run -d --name video-downloader-1 \
     --entrypoint=celery \
     dxsooo/video-download:0.2.4 -A celery_worker worker -c 4
 ```
+
+> For BiliBili, as some deps could not run with multi process, concurrency(-c) should be 1. But it is ok to run multi docker containers to walk around.
 
 And then you can send task by one of the following methods:
 
