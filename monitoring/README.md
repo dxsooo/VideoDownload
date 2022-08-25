@@ -10,6 +10,8 @@ Start worker(with `-E`) and flower with cmd first, and then
 ./start.sh
 ```
 
+> Edit `prometheus.yml` first if flower is started with docker or not in localhost.
+
 ## Configure
 
 Open [Grafana](http://localhost:3000/), use admin/admin for credentials.
