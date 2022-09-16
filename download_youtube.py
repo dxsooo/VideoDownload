@@ -32,7 +32,7 @@ def download_youtube(url, ydl):
         try:
             ydl.download([url])
             break
-        except:
+        except Exception:
             if retry == try_times - 1:
                 raise
             else:

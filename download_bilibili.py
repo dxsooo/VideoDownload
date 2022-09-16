@@ -42,7 +42,7 @@ async def download_bilibili(url, bdl):
             out_vs[0],
             os.path.join(bdl.videos_dir, name + ".mp4"),
         )
-    except:
+    except Exception:
         # clean
         out_vs = glob.glob(os.path.join(bdl.videos_dir, "*-" + name + "*"))
         for o in out_vs:
