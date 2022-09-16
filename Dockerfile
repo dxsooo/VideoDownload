@@ -1,9 +1,8 @@
 FROM python:3.10-slim-bullseye
 
 # poetry
-ADD https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py get-poetry.py 
-RUN python get-poetry.py
-ENV PATH="/root/.poetry/bin:$PATH"
+RUN python -c 'from urllib.request import urlopen; print(urlopen("https://install.python-poetry.org").read().decode())' | python -
+ENV PATH="/root/.local/bin:$PATH"
 
 RUN apt-get -qq update && \
     apt-get install -qqy aria2 ffmpeg && \
@@ -12,7 +11,8 @@ RUN apt-get -qq update && \
 
 # app
 COPY pyproject.toml poetry.lock ./
-RUN poetry export --without-hashes --extras celery -f requirements.txt | pip install -r /dev/stdin
+RUN poetry config virtualenvs.create false
+RUN poetry install --extras celery
 
 WORKDIR /app
 COPY *.py ./
