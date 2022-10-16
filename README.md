@@ -118,6 +118,17 @@ Host: localhost:5555
 
 > if you want to use custom queue instead of the default `celery`, start worker with `-Q <queue>`, and send request refer <https://github.com/mher/flower/issues/456>
 
+## Additional Configuration
+
+As [YT-DLP](https://github.com/yt-dlp/yt-dlp) is used in youtube download, a method to config its options is provided. You can add an ini file in `configs/youtube.ini` with content like:
+
+```ini
+[ydl_opts]
+max_filesize=314572800 ; limit file size, 300M
+```
+
+> You can also mount the ini file to docker container for configuration.
+
 ## Contributing
 
 It is welcome to make PR. After cloning, You can start with:

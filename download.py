@@ -1,5 +1,4 @@
 import argparse
-import os
 
 from config import DOWNLOAD_DIR
 from download_bilibili import download_bilibili_video, is_bilibili_video

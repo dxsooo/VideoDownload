@@ -1,8 +1,10 @@
+import configparser
 import os
 import re
-import time
 
 import yt_dlp
+
+from config import YOUTUBE_CONFIG_PATH
 
 ydl_opts = {
     "format": "best",
@@ -11,6 +13,15 @@ ydl_opts = {
     "external_downloader_args": ["-x16", "-c", "--file-allocation=none"],
     "merge_output_format": "mp4",
 }
+
+if os.path.exists(YOUTUBE_CONFIG_PATH):
+    config = configparser.ConfigParser()
+    config.read(YOUTUBE_CONFIG_PATH)
+    ydl_opts.update(config["ydl_opts"])
+    if "max_filesize" in ydl_opts.keys() and ydl_opts["max_filesize"] != "":
+        ydl_opts["max_filesize"] = int(ydl_opts["max_filesize"])
+        del ydl_opts["external_downloader"]
+        del ydl_opts["external_downloader_args"]
 
 
 def is_youtube_video(url: str) -> bool:
@@ -27,14 +38,4 @@ def download_youtube_video(url: str, dir: str):
 
 
 def download_youtube(url, ydl):
-    try_times = 3
-    for retry in range(try_times):
-        try:
-            ydl.download([url])
-            break
-        except Exception:
-            if retry == try_times - 1:
-                raise
-            else:
-                print("retry in 2 seconds")
-                time.sleep(2)
+    ydl.download([url])
