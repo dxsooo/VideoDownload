@@ -12,6 +12,14 @@ ydl_opts = {
     "external_downloader": "aria2c",
     "external_downloader_args": ["-x16", "-c", "--file-allocation=none"],
     "merge_output_format": "mp4",
+    "writesubtitles": True,
+    "subtitleslangs": ["zh.*"],
+    "postprocessors": [
+        {  # Embed subtitle in video using ffmpeg.
+            "key": "FFmpegEmbedSubtitle",
+            "already_have_subtitle": False,
+        }
+    ],
 }
 
 if os.path.exists(YOUTUBE_CONFIG_PATH):
