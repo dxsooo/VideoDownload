@@ -698,6 +698,24 @@ optional = false
 python-versions = ">=3.7"
 
 [[package]]
+name = "you-get"
+version = "0.4.1620"
+description = "Dumb downloader that scrapes the web"
+category = "main"
+optional = false
+python-versions = "*"
+develop = false
+
+[package.extras]
+socks = ["PySocks"]
+
+[package.source]
+type = "git"
+url = "https://github.com/soimort/you-get"
+reference = "HEAD"
+resolved_reference = "7d48d34d5da897546a6a8c4545d258d8d90a98ec"
+
+[[package]]
 name = "yt-dlp"
 version = "2022.10.4"
 description = "A youtube-dl fork with additional features and patches"
@@ -719,7 +737,7 @@ celery = ["python-dotenv", "celery", "pymongo", "flower"]
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.8"
-content-hash = "00f00a4e3b9d5a965f328db74837ad791ae96e93efcdc8efdd3b012ac95a5424"
+content-hash = "bb6ba2f64570db5aab8b9489214586146e6422c6d7af550507d67d39c0de41c9"
 
 [metadata.files]
 aiofiles = [
@@ -1313,6 +1331,7 @@ websockets = [
     {file = "websockets-10.3-pp37-pypy37_pp73-win_amd64.whl", hash = "sha256:3eda1cb7e9da1b22588cefff09f0951771d6ee9fa8dbe66f5ae04cc5f26b2b55"},
     {file = "websockets-10.3.tar.gz", hash = "sha256:fc06cc8073c8e87072138ba1e431300e2d408f054b27047d047b549455066ff4"},
 ]
+you-get = []
 yt-dlp = [
     {file = "yt-dlp-2022.10.4.tar.gz", hash = "sha256:1772a2e6f32b971b4d026deae3044f576b8052035255ca340f345cfe90d38d38"},
     {file = "yt_dlp-2022.10.4-py2.py3-none-any.whl", hash = "sha256:cc21d91048b275bda7018bdc3103374882261ccf29720206d61b10e168c8b719"},

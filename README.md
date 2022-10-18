@@ -6,7 +6,7 @@
 [![Docker Pulls](https://img.shields.io/docker/pulls/dxsooo/video-download?logo=docker)](https://hub.docker.com/repository/docker/dxsooo/video-download)
 <!-- [![GitHub all releases](https://img.shields.io/github/downloads/dxsooo/VideoDownload/total)]((https://github.com/dxsooo/VideoDownload/releases/latest)) -->
 
-VideoDownload tool for *Youtube/BiliBili*
+VideoDownload tool for *Youtube/BiliBili/douyin*
 
 ## Usage
 
@@ -37,7 +37,8 @@ python download.py -u <VideoURL>
 
 VideoURL is the video playing url.  
 For Youtube, it should be <https://www.youtube.com/watch?v=xxx>  
-For BiliBili, it should be <https://www.bilibili.com/video/BVxxxx> or <http://www.bilibili.com/video/avxxxx>
+For BiliBili, it should be <https://www.bilibili.com/video/BVxxxx> or <http://www.bilibili.com/video/avxxxx>  
+For douyin, it should be <https://www.douyin.com/video/xxxx>
 
 The video is saved in `videos/` of the current path and named with video id.
 
@@ -138,7 +139,15 @@ poetry install
 source`poetry env info --path`/bin/activate
 ```
 
-For Youtube, [YT-DLP](https://github.com/yt-dlp/yt-dlp) is used with aria2 as external downloader. For BiliBili, [Bilix](https://github.com/HFrost0/bilix) is used.
+Different deps is used for different sources:
+
+|source|deps|
+|-|-|
+|Youtube|[YT-DLP](https://github.com/yt-dlp/yt-dlp) + aria2(as external downloader)|
+|BiliBili|[Bilix](https://github.com/HFrost0/bilix)|
+|douyin|[You-Get](https://github.com/soimort/you-get)|
+
+The main concern are download speed and the ability of integration.
 
 If you need to work with Celery mode, you can start with:
 
@@ -177,3 +186,4 @@ python send_celery_task.py
 
 - [Bilix](https://github.com/HFrost0/bilix)
 - [YT-DLP](https://github.com/yt-dlp/yt-dlp)
+- [You-Get](https://github.com/soimort/you-get)
