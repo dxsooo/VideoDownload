@@ -8,11 +8,17 @@
 
 VideoDownload tool for *Youtube/BiliBili/douyin*
 
-## Usage
+- [Basic Usage](#basic-usage)
+  - [With source code](#with-source-code)
+  - [With Docker](#with-docker)
+- [Additional Configuration](#additional-configuration)
+- [Celery Mode](#celery-mode)
+- [Contributing](./CONTRIBUTING.md)
+- [Thanks](#thanks)
 
-### Standalone mode
+## Basic Usage
 
-#### With source code
+### With source code
 
 Requirements:
 
@@ -21,7 +27,7 @@ Requirements:
 - Poetry (as package management)
 - Python 3.8+
 
-Setup (for normal users, developers refer [Contributing](#Contributing)):
+Setup:
 
 ```bash
 git clone https://github.com/dxsooo/VideoDownload.git
@@ -57,7 +63,7 @@ options:
   -d DIR, --dir DIR  video save directory
 ```
 
-#### With Docker
+### With Docker
 
 You can easily download video by docker:
 
@@ -65,7 +71,18 @@ You can easily download video by docker:
 docker run -t -v/path/to/save:/app/videos dxsooo/video-download:0.3.0 download.py -u <VideoURL>
 ```
 
-### Celery worker mode
+## Additional Configuration
+
+As [YT-DLP](https://github.com/yt-dlp/yt-dlp) is used in youtube download, a method to config its options is provided. You can add an ini file in `configs/youtube.ini` with content like:
+
+```ini
+[ydl_opts]
+max_filesize=314572800 ; limit file size, 300M
+```
+
+> You can also mount the ini file to docker container for configuration.
+
+## Celery Mode
 
 VideoDownload can also work as a [Celery](https://docs.celeryq.dev/en/stable/index.html) worker that receive download tasks, making it possible and convenient to deploy in distribute systems and integrate with cloud-native services.
 
@@ -84,7 +101,7 @@ docker run -d --name video-downloader-1 \
 
 And then you can send task by one of the following methods:
 
-#### 1.with Celery, Python only
+### 1.with Celery, Python only
 
 ```python
 # pip install celery
@@ -93,7 +110,7 @@ celery = Celery(broker="<YOUR_CELERY_BROKER>")
 celery.send_task('celery_worker.download',("<VideoURL>",))
 ```
 
-#### 2.use REST API from celery flower, language-independent
+### 2.use REST API from celery flower, language-independent
 
 Start flower by:
 
@@ -121,69 +138,6 @@ Host: localhost:5555
 ```
 
 > if you want to use custom queue instead of the default `celery`, start worker with `-Q <queue>`, and send request refer <https://github.com/mher/flower/issues/456>
-
-## Additional Configuration
-
-As [YT-DLP](https://github.com/yt-dlp/yt-dlp) is used in youtube download, a method to config its options is provided. You can add an ini file in `configs/youtube.ini` with content like:
-
-```ini
-[ydl_opts]
-max_filesize=314572800 ; limit file size, 300M
-```
-
-> You can also mount the ini file to docker container for configuration.
-
-## Contributing
-
-It is welcome to make PR. After cloning, You can start with:
-
-```bash
-poetry install
-source`poetry env info --path`/bin/activate
-```
-
-Different deps is used for different sources:
-
-|source|deps|
-|-|-|
-|Youtube|[YT-DLP](https://github.com/yt-dlp/yt-dlp) + aria2(as external downloader)|
-|BiliBili|[Bilix](https://github.com/HFrost0/bilix)|
-|douyin|[You-Get](https://github.com/soimort/you-get)|
-
-The main concern are download speed and the ability of integration.
-
-If you need to work with Celery mode, you can start with:
-
-```bash
-poetry install -E celery
-```
-
-And there are scripts(docker compose is needed) in `./devenv` that help to create local environment for broker(RabbitMQ) and result backend(MongoDB):
-
-```bash
-cd devenv
-./start.sh
-```
-
-> Create/edit `.env` file if you want to use external broker or backend
-
-Run the worker with:
-
-```bash
-celery -A celery_worker worker
-```
-
-Start flower(<http://localhost:5555>) with:
-
-```bash
-celery -A celery_worker flower
-```
-
-In addition to the methods described in [Celery worker mode](#Celery-worker-mode), you can send tasks by:
-
-```bash
-python send_celery_task.py
-```
 
 ## Thanks
 
