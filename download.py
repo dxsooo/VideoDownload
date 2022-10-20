@@ -6,6 +6,17 @@ from download_douyin import download_douyin_video, is_douyin_video
 from download_youtube import download_youtube_video, is_youtube_video
 
 
+def download(url, dir):
+    if is_youtube_video(url):
+        download_youtube_video(url, dir)
+    elif is_bilibili_video(url):
+        download_bilibili_video(url, dir)
+    elif is_douyin_video(url):
+        download_douyin_video(url, dir)
+    else:
+        raise Exception("Invalid video url")
+
+
 def parse_args():
     parser = argparse.ArgumentParser()
     parser.add_argument("-u", "--url", required=True, help="video playing url")
@@ -20,11 +31,7 @@ if __name__ == "__main__":
     dir = args.dir
     url = args.url
 
-    if is_youtube_video(url):
-        download_youtube_video(url, dir)
-    elif is_bilibili_video(url):
-        download_bilibili_video(url, dir)
-    elif is_douyin_video(url):
-        download_douyin_video(url, dir)
-    else:
-        print("Invalid video url")
+    try:
+        download(args.url, args.dir)
+    except Exception as e:
+        print(e)
