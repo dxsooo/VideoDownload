@@ -10,6 +10,7 @@ def is_ixigua_video(url: str) -> bool:
 
 def download_ixigua_video(url: str, dir: str):
     os.makedirs(dir, exist_ok=True)
+    common.skip_existing_file_size_check = True
     common.output_filename = get_id(url)
     # print(common.output_filename)
     common.any_download(url=url, info_only=False, output_dir=dir, merge=True)
