@@ -8,7 +8,7 @@ import os
 from celery import Celery
 
 from config import DOWNLOAD_DIR
-from download import download
+from download import download as _download
 
 app = Celery(
     "VideoDownload",
@@ -19,5 +19,5 @@ app = Celery(
 
 @app.task
 def download(url: str, dir: str = DOWNLOAD_DIR):
-    download(url, dir)
+    _download(url, dir)
     return {"source": url}
