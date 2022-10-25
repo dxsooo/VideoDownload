@@ -1,3 +1,5 @@
+import time
+
 from dotenv import find_dotenv, load_dotenv
 
 # load env parameters from file named .env
@@ -18,6 +20,8 @@ app = Celery(
 
 
 @app.task
-def download(url: str, dir: str = DOWNLOAD_DIR):
+def download(url: str, dir: str = DOWNLOAD_DIR, hold_on_sec: int = 0):
     _download(url, dir)
+    # set hold on time to make task longer, that avoid abusing target website
+    time.sleep(hold_on_sec)
     return {"source": url}
