@@ -42,8 +42,4 @@ def download_youtube_video(url: str, dir: str):
     os.makedirs(dir, exist_ok=True)
     ydl_opts["outtmpl"] = os.path.join(dir, "%(id)s.%(ext)s")
     with yt_dlp.YoutubeDL(ydl_opts) as ydl:
-        download_youtube(url, ydl)
-
-
-def download_youtube(url, ydl):
-    ydl.download([url])
+        ydl.download([url])

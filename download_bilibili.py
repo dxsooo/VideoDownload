@@ -16,7 +16,7 @@ def is_bilibili_video(url: str) -> bool:
 def download_bilibili_video(url: str, dir: str):
     os.makedirs(dir, exist_ok=True)
     asyncio.run(
-        download_bilibili(
+        _download_video(
             url, bilix.DownloaderBilibili(part_concurrency=10, videos_dir=dir)
         )
     )
@@ -30,7 +30,7 @@ def get_id(url: str) -> str:
         return re.search(r"(av[0-9]+)$", url).group(0)
 
 
-async def download_bilibili(url, bdl):
+async def _download_video(url, bdl):
     # get bvid/avid from url to rename later
     name = get_id(url)
     try:

@@ -6,7 +6,7 @@
 [![Docker Pulls](https://img.shields.io/docker/pulls/dxsooo/video-download?logo=docker)](https://hub.docker.com/repository/docker/dxsooo/video-download)
 <!-- [![GitHub all releases](https://img.shields.io/github/downloads/dxsooo/VideoDownload/total)]((https://github.com/dxsooo/VideoDownload/releases/latest)) -->
 
-VideoDownload tool for *Youtube/BiliBili/douyin*
+VideoDownload tool for *Youtube/BiliBili/douyin/ixigua*
 
 - [Basic Usage](#basic-usage)
   - [With source code](#with-source-code)
@@ -45,9 +45,10 @@ VideoURL is the video playing url and the url pattern should follow:
 
 |source|url pattern|
 |-|-|
-|Youtube|<https://www.youtube.com/watch?v=xxx>|
+|Youtube|<https://www.youtube.com/watch?v=xxxx>|
 |BiliBili|<https://www.bilibili.com/video/BVxxxx> or <http://www.bilibili.com/video/avxxxx> |
 |douyin|<https://www.douyin.com/video/xxxx>|
+|ixigua|<https://www.ixigua.com/xxxx>|
 
 The video is saved in `videos/` of the current path and named with video id.
 
@@ -68,7 +69,7 @@ options:
 You can easily download video by docker:
 
 ```bash
-docker run -t -v/path/to/save:/app/videos dxsooo/video-download:0.3.0 download.py -u <VideoURL>
+docker run -t -v/path/to/save:/app/videos dxsooo/video-download:0.4.0 download.py -u <VideoURL>
 ```
 
 ## Additional Configuration
@@ -94,7 +95,7 @@ docker run -d --name video-downloader-1 \
     -e BACKEND=${YOUR_CELERY_BACKEND} \
     -v /path/to/save:/app/videos \
     --entrypoint=celery \
-    dxsooo/video-download:0.3.0 -A celery_worker worker -c 4
+    dxsooo/video-download:0.4.0 -A celery_worker worker -c 4
 ```
 
 > For BiliBili, as some deps could not run with multi process, concurrency(-c) should be 1. But it is ok to run multi docker containers to walk around.
@@ -120,7 +121,7 @@ docker run -d --name video-downloader-flower \
     -e BACKEND=${YOUR_CELERY_BACKEND} \
     --entrypoint=celery \
     -p 5555:5555 \
-    dxsooo/video-download:0.3.0 -A celery_worker flower
+    dxsooo/video-download:0.4.0 -A celery_worker flower
 ```
 
 Example request:
@@ -138,6 +139,8 @@ Host: localhost:5555
 ```
 
 > if you want to use custom queue instead of the default `celery`, start worker with `-Q <queue>`, and send request refer <https://github.com/mher/flower/issues/456>
+
+Read the source code for more parameters to control task.
 
 ## Thanks
 
