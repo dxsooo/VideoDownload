@@ -6,8 +6,8 @@ authors = ["dxsooo <zeohan.dxs@gmail.com>"]
 
 [tool.poetry.dependencies]
 python = "^3.8"
-yt-dlp = "^2022.9.1"
-bilix = "^0.9.3"
+yt-dlp = "^2022.11.11"
+bilix = "^0.10.0"
 you-get = {git = "https://github.com/soimort/you-get"}
 python-dotenv = {version = "^0.21.0", optional = true}
 celery = {version = "^5.2.7", optional = true}
