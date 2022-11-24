@@ -14,8 +14,16 @@ jobs:
         with:
           python-version: "3.10"
 
+      - name: Setup poetry
+        run: |
+          curl -sSL https://install.python-poetry.org | python3 -
+        env:
+          POETRY_VIRTUALENVS_CREATE: false
+
+      - uses: FedericoCarboni/setup-ffmpeg@v1
+
       - name: Install dependencies
-        run: pip install -r requirements.txt
+        run: poetry install --dev
 
       - name: Run tests and collect coverage
         run: pytest --cov
