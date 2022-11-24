@@ -711,6 +711,17 @@ pytest = ">=4.6"
 testing = ["fields", "hunter", "process-tests", "pytest-xdist", "six", "virtualenv"]
 
 [[package]]
+name = "pytest-custom-exit-code"
+version = "0.3.0"
+description = "Exit pytest test session with custom exit code in different scenarios"
+category = "dev"
+optional = false
+python-versions = ">2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*"
+
+[package.dependencies]
+pytest = ">=4.0.2"
+
+[[package]]
 name = "python-dotenv"
 version = "0.21.0"
 description = "Read key-value pairs from a .env file and set them as environment variables"
@@ -871,7 +882,7 @@ celery = ["python-dotenv", "celery", "pymongo", "flower"]
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.8"
-content-hash = "7778a5ccbb2e5358b24c99df9cad4a66a94be76e6082c6cc87c39d64519d953b"
+content-hash = "9c1c0f94ecb2bf13066faef6747bd65d27c6fc17c84e195ea6aca25db3df7551"
 
 [metadata.files]
 aiofiles = [
@@ -1452,6 +1463,10 @@ pytest = [
 pytest-cov = [
     {file = "pytest-cov-4.0.0.tar.gz", hash = "sha256:996b79efde6433cdbd0088872dbc5fb3ed7fe1578b68cdbba634f14bb8dd0470"},
     {file = "pytest_cov-4.0.0-py3-none-any.whl", hash = "sha256:2feb1b751d66a8bd934e5edfa2e961d11309dc37b73b0eabe73b5945fee20f6b"},
+]
+pytest-custom-exit-code = [
+    {file = "pytest-custom_exit_code-0.3.0.tar.gz", hash = "sha256:51ffff0ee2c1ddcc1242e2ddb2a5fd02482717e33a2326ef330e3aa430244635"},
+    {file = "pytest_custom_exit_code-0.3.0-py3-none-any.whl", hash = "sha256:6e0ce6e57ce3a583cb7e5023f7d1021e19dfec22be41d9ad345bae2fc61caf3b"},
 ]
 python-dotenv = [
     {file = "python-dotenv-0.21.0.tar.gz", hash = "sha256:b77d08274639e3d34145dfa6c7008e66df0f04b7be7a75fd0d5292c191d79045"},
