@@ -18,7 +18,7 @@ jobs:
         run: |
           curl -sSL https://install.python-poetry.org | python3 -
 
-      - uses: FedericoCarboni/setup-ffmpeg@v1
+      - uses: FedericoCarboni/setup-ffmpeg@v2
 
       - name: Install dependencies
         run: poetry install
