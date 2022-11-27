@@ -6,7 +6,7 @@ import pytest
 from download_youtube import download_youtube_video, is_youtube_video
 
 
-class TestDownloadyoutube:
+class TestDownloadYoutube:
     test_dl_dir = "test_dl"
 
     def test_is_youtube_video(self):
