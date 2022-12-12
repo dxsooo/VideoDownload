@@ -30,6 +30,8 @@ if os.path.exists(YOUTUBE_CONFIG_PATH):
         ydl_opts["max_filesize"] = int(ydl_opts["max_filesize"])
         del ydl_opts["external_downloader"]
         del ydl_opts["external_downloader_args"]
+    if "subtitleslang" in ydl_opts.keys():
+        ydl_opts["subtitleslangs"] = [ydl_opts["subtitleslang"]]
 
 
 def is_youtube_video(url: str) -> bool:
