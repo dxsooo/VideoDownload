@@ -18,7 +18,9 @@ jobs:
         run: curl -sSL https://install.python-poetry.org | python3 -
 
       - name: Install packages
-        run: sudo apt-get install -y ffmpeg aria2
+        run: |
+            sudo apt-get update
+            sudo apt-get install -y ffmpeg aria2
 
       - name: Install dependencies
         run: poetry install
