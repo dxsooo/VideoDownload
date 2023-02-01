@@ -27,7 +27,7 @@ class TestDownloadYoutube:
         assert os.path.exists(fn)
         with open(fn, "rb") as file_to_check:
             data = file_to_check.read()
-            assert hashlib.md5(data).hexdigest() == "fa3986677b1220fc9de5972bf1998574"
+            assert hashlib.md5(data).hexdigest() == "3caf290e3cf5de5d46ded5810f83135c"
 
     def test_download_youtube_video_failures(self):
         with pytest.raises(Exception):
