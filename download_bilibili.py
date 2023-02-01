@@ -3,7 +3,8 @@ import glob
 import os
 import re
 
-import bilix
+import bilix.api.bilibili as api
+from bilix import DownloaderBilibili
 
 
 def is_bilibili_video(url: str) -> bool:
@@ -16,9 +17,7 @@ def is_bilibili_video(url: str) -> bool:
 def download_bilibili_video(url: str, dir: str):
     os.makedirs(dir, exist_ok=True)
     asyncio.run(
-        _download_video(
-            url, bilix.DownloaderBilibili(part_concurrency=10, videos_dir=dir)
-        )
+        _download_video(url, DownloaderBilibili(part_concurrency=10, videos_dir=dir))
     )
 
 
@@ -34,7 +33,12 @@ async def _download_video(url, bdl):
     # get bvid/avid from url to rename later
     name = get_id(url)
     try:
-        await bdl.get_video(url, add_name=name)
+        # hack video info to set name
+        video_info = await api.get_video_info(bdl.client, url)
+        # print(video_info.pages[video_info.p].p_name)
+        video_info.pages[video_info.p].p_name = name
+
+        await bdl.get_video(url, video_info=video_info)
         out_vs = glob.glob(os.path.join(bdl.videos_dir, "*-" + name + ".mp4"))
         if len(out_vs) == 0:
             raise Exception(f"Failed to get video in {url}")
