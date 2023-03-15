@@ -88,14 +88,14 @@ lxml = ["lxml"]
 
 [[package]]
 name = "bilix"
-version = "0.14.0"
+version = "0.14.1"
 description = "⚡️快如闪电的b站视频下载工具，基于Python现代Async异步特性，高速批量下载整部动漫，电视剧，电影，up投稿等"
 category = "main"
 optional = false
 python-versions = ">=3.8"
 files = [
-    {file = "bilix-0.14.0-py3-none-any.whl", hash = "sha256:2787fd3bf333150b18c0f26ac0ed98b652366dbe7d56601e96cfba311fc9ba83"},
-    {file = "bilix-0.14.0.tar.gz", hash = "sha256:040f93cac8b1bbf219dafd5ed9948e2742520174763442b25a36078284524253"},
+    {file = "bilix-0.14.1-py3-none-any.whl", hash = "sha256:af20f5beee87258a0b6827da1ce2b2fa3dcee3787e9af315e3653e720eab4f98"},
+    {file = "bilix-0.14.1.tar.gz", hash = "sha256:79a56b7a03cc849aa839e06645c375f6c866482ed0efae1c5bec0fa449873cd3"},
 ]
 
 [package.dependencies]
@@ -103,7 +103,7 @@ aiofiles = ">=0.8.0"
 anyio = "*"
 bs4 = "*"
 click = ">=8.0.3"
-danmakuc = ">=0.3.2"
+danmakuc = ">=0.3.3"
 httpx = {version = ">=0.23.3", extras = ["http2"]}
 json5 = "*"
 m3u8 = "*"
@@ -616,48 +616,48 @@ toml = ["tomli"]
 
 [[package]]
 name = "danmakuc"
-version = "0.3.2"
+version = "0.3.3"
 description = "Faster conversion for larger Danmaku to Ass format"
 category = "main"
 optional = false
 python-versions = ">=3.8.3"
 files = [
-    {file = "danmakuC-0.3.2-cp310-cp310-macosx_10_9_x86_64.whl", hash = "sha256:f803a4a5ba1bff72d36508eae04257ef284f55d4557b405df89322eebcdbe384"},
-    {file = "danmakuC-0.3.2-cp310-cp310-macosx_11_0_arm64.whl", hash = "sha256:f98597ce22efc1f68b6c500afccb83046e21acd63b9d914df8ff3c471da5b9a3"},
-    {file = "danmakuC-0.3.2-cp310-cp310-manylinux_2_17_aarch64.manylinux2014_aarch64.whl", hash = "sha256:14d4732f8030d5c706529729219c367eaee10435afa59bc54fe243b83ae49ffc"},
-    {file = "danmakuC-0.3.2-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:e3c1b8d64931dd3d8501ca4ad018ce7fc186b28977edc938ea6cc8da59a12fc9"},
-    {file = "danmakuC-0.3.2-cp310-cp310-musllinux_1_1_aarch64.whl", hash = "sha256:144affb93fff09418b21258e47e3e7e1fc108166c51223ff514624230cb15290"},
-    {file = "danmakuC-0.3.2-cp310-cp310-musllinux_1_1_x86_64.whl", hash = "sha256:0cedc034f3eb19a79b79a38b959474e9fa68bee1805250d79364b22a55e64946"},
-    {file = "danmakuC-0.3.2-cp310-cp310-win_amd64.whl", hash = "sha256:b4bd30d61e0ba5d93a36b1e7d7275e5df0d2b20b2a31bfc12115b84ed4006c81"},
-    {file = "danmakuC-0.3.2-cp311-cp311-macosx_10_9_x86_64.whl", hash = "sha256:eaa664d1a7a776e16050c4afb047da84279bed1b517a079766a3e655b4c25f2f"},
-    {file = "danmakuC-0.3.2-cp311-cp311-macosx_11_0_arm64.whl", hash = "sha256:f4c9d8e26802b0ce387b0c9591178c4784eef8eb17264ffbddb071e878620159"},
-    {file = "danmakuC-0.3.2-cp311-cp311-manylinux_2_17_aarch64.manylinux2014_aarch64.whl", hash = "sha256:5080501ae5829db313830ca0cae9ff9512e79a4ee70a3d67bdb327f712c51c01"},
-    {file = "danmakuC-0.3.2-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:750383988f622197eb92e1149bc8f72af672ed2319152feefec80287b84ed743"},
-    {file = "danmakuC-0.3.2-cp311-cp311-musllinux_1_1_aarch64.whl", hash = "sha256:d6d54bd88db7f927a10104148741d72b90b16dab8c2b52a9151cffbe14b40111"},
-    {file = "danmakuC-0.3.2-cp311-cp311-musllinux_1_1_x86_64.whl", hash = "sha256:95ea76d0f9407860e94ce2882dfd036f39cb14d42ea23c6099f8c3a29f948452"},
-    {file = "danmakuC-0.3.2-cp311-cp311-win_amd64.whl", hash = "sha256:832860bcc5c9512c8ae6174c90f3ddf42de189d083f256add8565e387ec3ead9"},
-    {file = "danmakuC-0.3.2-cp38-cp38-macosx_10_9_x86_64.whl", hash = "sha256:3584be2bc23a248a57526b6abffa615981a7d4455282855c96aacdf4cd813a7b"},
-    {file = "danmakuC-0.3.2-cp38-cp38-macosx_11_0_arm64.whl", hash = "sha256:556062f559c4d92f9c17ae9a9ba09c2c2925b42af6139ef208fdcad4f24c7c4c"},
-    {file = "danmakuC-0.3.2-cp38-cp38-manylinux_2_17_aarch64.manylinux2014_aarch64.whl", hash = "sha256:befd477f0ea2f7cdb772c2861475dd5d310015f94b6003b2f42a1ff0261454a8"},
-    {file = "danmakuC-0.3.2-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:1685a2112cc29ed22a43d6ec23995cdadfd8e77b30381d2fa3fb6f6a614f87a7"},
-    {file = "danmakuC-0.3.2-cp38-cp38-musllinux_1_1_aarch64.whl", hash = "sha256:f37dab24376438756b2a8dd1a1fdd37eadeb2269eaf91e520e2b695cda4e3024"},
-    {file = "danmakuC-0.3.2-cp38-cp38-musllinux_1_1_x86_64.whl", hash = "sha256:8b04fe5afdebf005e812c4419ab7e44255e5d9adcf7cd29f3a267b5714729f63"},
-    {file = "danmakuC-0.3.2-cp38-cp38-win_amd64.whl", hash = "sha256:2ef5d23c597361fd6673f306cc046fb20fcbca773bea5f3d12d476d488b241e3"},
-    {file = "danmakuC-0.3.2-cp39-cp39-macosx_10_9_x86_64.whl", hash = "sha256:0b730b4516ddda26158b7ddad9aa5c544803a7af4b06f020d614125107d5f03f"},
-    {file = "danmakuC-0.3.2-cp39-cp39-macosx_11_0_arm64.whl", hash = "sha256:dc7d3f59face040c4257f00b7072edf3a7ce1044ae4dd3a97544502b6388a5a3"},
-    {file = "danmakuC-0.3.2-cp39-cp39-manylinux_2_17_aarch64.manylinux2014_aarch64.whl", hash = "sha256:b110c9b7d218a58bf537edd2ba81a9cd3794da24586dc999a0522c44347e5592"},
-    {file = "danmakuC-0.3.2-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:014050d50e79a4b4f604c3852fa17bcb5898bf8155865fe7d772033541e18601"},
-    {file = "danmakuC-0.3.2-cp39-cp39-musllinux_1_1_aarch64.whl", hash = "sha256:a85f3902782537e6470871dea64faf45bc5c3059242e9a97db2ba00225c3ccd8"},
-    {file = "danmakuC-0.3.2-cp39-cp39-musllinux_1_1_x86_64.whl", hash = "sha256:1baf033e4a9480c1ddba83e17050d69a05b03908dbd4ee7debddf0098e72031c"},
-    {file = "danmakuC-0.3.2-cp39-cp39-win_amd64.whl", hash = "sha256:1be7db21a88af69e060a02eecb6bcb8a033baf4baef24c168aa5a875fa953231"},
-    {file = "danmakuC-0.3.2-pp38-pypy38_pp73-macosx_10_9_x86_64.whl", hash = "sha256:4da2bd54a4ccfe97147d2ea54bfd58d75ca0566e4e5049e40324472a5791fb20"},
-    {file = "danmakuC-0.3.2-pp38-pypy38_pp73-manylinux_2_17_aarch64.manylinux2014_aarch64.whl", hash = "sha256:75340e8bfabb60ea4fd84c6dc525218b1a5673209e79bfac14d449cd6ec6c13f"},
-    {file = "danmakuC-0.3.2-pp38-pypy38_pp73-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:1d0537e262492a6c92671b94b4515891427c9dd2a23743f9778eedd05bc8b62c"},
-    {file = "danmakuC-0.3.2-pp38-pypy38_pp73-win_amd64.whl", hash = "sha256:c13354e677a4f934eb5a24816f8433ae16b23f2f87c1af9f91001cb842ed822a"},
-    {file = "danmakuC-0.3.2-pp39-pypy39_pp73-macosx_10_9_x86_64.whl", hash = "sha256:59a977e0d2c9938318a826c8138e77808a6a36b64412a5e33c253411f674a609"},
-    {file = "danmakuC-0.3.2-pp39-pypy39_pp73-manylinux_2_17_aarch64.manylinux2014_aarch64.whl", hash = "sha256:3c253a9ba39238656b2955da76f1fbd7c2ac01bff632b9455a2867e00a217944"},
-    {file = "danmakuC-0.3.2-pp39-pypy39_pp73-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:c505a86d5039122fa4582723672bf409789723429ef5ca82665b4efdfdddfbfd"},
-    {file = "danmakuC-0.3.2-pp39-pypy39_pp73-win_amd64.whl", hash = "sha256:04c36b7b3369167bb281d18bfb9bb27644a65027b1607f32ad9a5cd211c68f1e"},
+    {file = "danmakuC-0.3.3-cp310-cp310-macosx_10_9_x86_64.whl", hash = "sha256:6336ff8b22740aa5574092152d440f87ec6e5ee0a467bc05e85c99aaafe7e2ae"},
+    {file = "danmakuC-0.3.3-cp310-cp310-macosx_11_0_arm64.whl", hash = "sha256:6b17e60a1f7404e400c575628ac0f0df4d29c6227510691248e1255e0726c442"},
+    {file = "danmakuC-0.3.3-cp310-cp310-manylinux_2_17_aarch64.manylinux2014_aarch64.whl", hash = "sha256:058d59d2e96dc12f5611e677821faf8db0fb6121fb21b8aa453273242d467e05"},
+    {file = "danmakuC-0.3.3-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:961897ac8745de4fc3c664e04788b4fac1166823f9a1e58260d3277330c50431"},
+    {file = "danmakuC-0.3.3-cp310-cp310-musllinux_1_1_aarch64.whl", hash = "sha256:6f36ff0db369dc86dc00d9666451680a26f557f1a3695fb0703d3653e71a9b3e"},
+    {file = "danmakuC-0.3.3-cp310-cp310-musllinux_1_1_x86_64.whl", hash = "sha256:a15c033218eb2c66e405970f2cbea231eed322f7b818100fd1ba571b3ce0f537"},
+    {file = "danmakuC-0.3.3-cp310-cp310-win_amd64.whl", hash = "sha256:6f01f659fcd671a42d68e383cbef591de41456de21a6d0dfbce6a3efa8175cd5"},
+    {file = "danmakuC-0.3.3-cp311-cp311-macosx_10_9_x86_64.whl", hash = "sha256:9ff811a3f373b7cd2034b81a9b8f31ffb06bd3c43eadcdefe7f6bc9fb3514b11"},
+    {file = "danmakuC-0.3.3-cp311-cp311-macosx_11_0_arm64.whl", hash = "sha256:3e7bb076a3c6ec4025343e4d062d833b49520710ce85670090ed52078da6bcf6"},
+    {file = "danmakuC-0.3.3-cp311-cp311-manylinux_2_17_aarch64.manylinux2014_aarch64.whl", hash = "sha256:64303bf2f34156368e3d92005c98aecb4ec6c3d014f47f310cb8f520363f5436"},
+    {file = "danmakuC-0.3.3-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:eaa262495f72e57b5c9e43bceb1aaa0249323da691dafe047d6f8131386e36c2"},
+    {file = "danmakuC-0.3.3-cp311-cp311-musllinux_1_1_aarch64.whl", hash = "sha256:6f3f719bc5a2be76e12efee2624d50f3afe661d925eac1ae29e67030d3683a84"},
+    {file = "danmakuC-0.3.3-cp311-cp311-musllinux_1_1_x86_64.whl", hash = "sha256:5de503023e76f6ea87ca3e5d77938efb3ee64261774d8092d7c5b4b24c99a41e"},
+    {file = "danmakuC-0.3.3-cp311-cp311-win_amd64.whl", hash = "sha256:81db0dbcc0e0800e3f93236093464b033cdbe4b1d10b67d51e318324c0ee3372"},
+    {file = "danmakuC-0.3.3-cp38-cp38-macosx_10_9_x86_64.whl", hash = "sha256:f1204ab43a1d20db88b7af1b1be2d289b19b3293fcc6508411cbd38f3e8fbf73"},
+    {file = "danmakuC-0.3.3-cp38-cp38-macosx_11_0_arm64.whl", hash = "sha256:0d7728a364b05ce0226511f222c09ebe05f736ae91b3032d67a1f721ed7de401"},
+    {file = "danmakuC-0.3.3-cp38-cp38-manylinux_2_17_aarch64.manylinux2014_aarch64.whl", hash = "sha256:b368d7015185cff70a1341147518a173a81a1940d4ef8e2b183e36fdc21b98cd"},
+    {file = "danmakuC-0.3.3-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:6dbb923c52c0dff93b79d9a511ae981daf08cf8059e47942e35cd879ad891bd2"},
+    {file = "danmakuC-0.3.3-cp38-cp38-musllinux_1_1_aarch64.whl", hash = "sha256:5f8c6c313ef56a7f67cd4ee21efac6e5387908fc48df81b8ff1691a509ec2dae"},
+    {file = "danmakuC-0.3.3-cp38-cp38-musllinux_1_1_x86_64.whl", hash = "sha256:218a7c7c9a9274613dff22a7cbaaab6306c67bf4323709e965247e0eaa2d437a"},
+    {file = "danmakuC-0.3.3-cp38-cp38-win_amd64.whl", hash = "sha256:fd444d3a60039d8cc7547a33531db0721ea4aa54f606ee5c5aaf9fd168a67ec3"},
+    {file = "danmakuC-0.3.3-cp39-cp39-macosx_10_9_x86_64.whl", hash = "sha256:a1432313268eed03189eb279af1b8fa4f1d945c564fdb6dc6633b81d93e01831"},
+    {file = "danmakuC-0.3.3-cp39-cp39-macosx_11_0_arm64.whl", hash = "sha256:39a58ee26b6105c5abcb6e086ddfa09cc7bb17078d742096ed3628bc0c5c95e1"},
+    {file = "danmakuC-0.3.3-cp39-cp39-manylinux_2_17_aarch64.manylinux2014_aarch64.whl", hash = "sha256:4207cd4554a7c8f17e2c017ea9b6f48771cf2ace93413c8d746df5aa50f1e252"},
+    {file = "danmakuC-0.3.3-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:d413618c412edf40b596354a179d704c3e904defeb174f0f6a81f0fe2f2d3519"},
+    {file = "danmakuC-0.3.3-cp39-cp39-musllinux_1_1_aarch64.whl", hash = "sha256:80ce21b9e19742d4d1b5af2b6b7fd7930ee2bc8fdabaed2f853dc01d27fce1e0"},
+    {file = "danmakuC-0.3.3-cp39-cp39-musllinux_1_1_x86_64.whl", hash = "sha256:0c7061e6a6486d6717e42bde887a028ba3c2dc782ad8876bacd9b2c9014910e7"},
+    {file = "danmakuC-0.3.3-cp39-cp39-win_amd64.whl", hash = "sha256:06cd459de712f42f0c41543b9363e0007257738a5c63944d5b52260fdcb1f389"},
+    {file = "danmakuC-0.3.3-pp38-pypy38_pp73-macosx_10_9_x86_64.whl", hash = "sha256:319800d5c4fe7b60e9878a5c077065049e8aeb0215709019b1f68cb33e465309"},
+    {file = "danmakuC-0.3.3-pp38-pypy38_pp73-manylinux_2_17_aarch64.manylinux2014_aarch64.whl", hash = "sha256:02beff407e15ff51da1b6874f3c225daab9da79b2154d32ce6bb6d42d2f42109"},
+    {file = "danmakuC-0.3.3-pp38-pypy38_pp73-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:a07e40f7d69f48f599d23d7de71dbfb6d746f441a58e709056a48cb1417abe77"},
+    {file = "danmakuC-0.3.3-pp38-pypy38_pp73-win_amd64.whl", hash = "sha256:c9b18fb112c235dd5af0ca42a29206e5ec7d4e8f8f4f470a421b059d63bd5b86"},
+    {file = "danmakuC-0.3.3-pp39-pypy39_pp73-macosx_10_9_x86_64.whl", hash = "sha256:7e5ff1f6e6b8f63aea6fb81786ffe940285d1c74abc5c39f141b88f2bdcbc512"},
+    {file = "danmakuC-0.3.3-pp39-pypy39_pp73-manylinux_2_17_aarch64.manylinux2014_aarch64.whl", hash = "sha256:5daf79e005402cdf0c9d618defd5cf4cd753020dbd77b9e8120a3d54a2d3e475"},
+    {file = "danmakuC-0.3.3-pp39-pypy39_pp73-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:7de5fadb53bbe59d15cd635bd5e50ece1975db9f692ff6924619f3099c0fd659"},
+    {file = "danmakuC-0.3.3-pp39-pypy39_pp73-win_amd64.whl", hash = "sha256:b0d920e5c933828279a32d7ff68f22a57fc8590ffa6e56680d154e7bd0ec8ee8"},
 ]
 
 [package.dependencies]
