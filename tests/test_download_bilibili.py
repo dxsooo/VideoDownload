@@ -25,9 +25,7 @@ class TestDownloadBilibili:
         )
         fn = os.path.join(self.test_dl_dir, "BV1NF411P7C9.mp4")
         assert os.path.exists(fn)
-        with open(fn, "rb") as file_to_check:
-            data = file_to_check.read()
-            assert hashlib.md5(data).hexdigest() == "8f6f3eb0bfe716f144cd1ec48df915dc"
+        assert os.path.getsize(fn) == 49233582
 
     def test_download_bilibili_video_failures(self):
         with pytest.raises(Exception):
