@@ -58,7 +58,7 @@ VideoURL is the video playing url and the url pattern should follow:
 |~~ixigua~~|~~<https://www.ixigua.com/xxxx>~~|
 
 > douyin is not supported right now (2023.4)  
-> ixigua is not supported because https://github.com/soimort/you-get/pull/3001 is not merged (2023.4)
+> ixigua is not supported because <https://github.com/soimort/you-get/pull/3001> is not merged (2023.4)
 
 The video is saved in `videos/` of the current path and named with video id.
 
