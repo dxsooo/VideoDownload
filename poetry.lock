@@ -1782,8 +1782,8 @@ socks = ["PySocks"]
 
 [package.source]
 type = "git"
-url = "https://github.com/soimort/you-get"
-reference = "HEAD"
+url = "https://github.com/soimort/you-get.git"
+reference = "develop"
 resolved_reference = "2aaa877a9b8ebda9ed25cb87df1ad760700b55c4"
 
 [[package]]
@@ -1812,4 +1812,4 @@ celery = ["celery", "flower", "pymongo", "python-dotenv"]
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.8.3"
-content-hash = "2e69905d99e70f7e0cdb7dc269c9d2d3f3dbb6233ac98d31264c8a57029505d1"
+content-hash = "75073962177ceb8dd127d8d94a4e85fac90dad10030d5f3a47948d8894bfec2d"

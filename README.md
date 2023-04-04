@@ -33,7 +33,13 @@ Setup:
 ```bash
 git clone https://github.com/dxsooo/VideoDownload.git
 cd VideoDownload
-poetry export -f requirements.txt | pip install -r /dev/stdin
+
+# unix like systems
+poetry export -f requirements.txt --without-hashes | pip install -r /dev/stdin
+
+# for windows powershell or cmd
+poetry export -f requirements.txt --output requirements.txt --without-hashes
+pip install -r requirements.txt
 ```
 
 Run:
