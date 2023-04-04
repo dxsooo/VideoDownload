@@ -162,4 +162,13 @@ cython_debug/
 .vscode/
 videos/
 devenv/data/
+
+requirements.txt
+
 **/*.mp4
+**/*.mkv
+**/*.webm
+**/*.webm.part
+**/*.vtt
+**/*.srt
+**/*.zip
