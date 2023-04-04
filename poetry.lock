@@ -1703,14 +1703,14 @@ resolved_reference = "2aaa877a9b8ebda9ed25cb87df1ad760700b55c4"
 
 [[package]]
 name = "yt-dlp"
-version = "2023.2.17"
+version = "2023.3.4"
 description = "A youtube-dl fork with additional features and patches"
 category = "main"
 optional = false
 python-versions = ">=3.7"
 files = [
-    {file = "yt-dlp-2023.2.17.tar.gz", hash = "sha256:9af92de5effc193bdb51216d9ebf28874d96180d202fae752b0d9f2a63380f3a"},
-    {file = "yt_dlp-2023.2.17-py2.py3-none-any.whl", hash = "sha256:3b2df037c80922f0f83f63ee2f9253496b4a8668c0fe8d2a836ba9040f853b07"},
+    {file = "yt-dlp-2023.3.4.tar.gz", hash = "sha256:265d5da97a76c15d7d9a4088a67b78acd5dcf6f8cfd8257c52f581ff996ff515"},
+    {file = "yt_dlp-2023.3.4-py2.py3-none-any.whl", hash = "sha256:40ca421407ce07c8fd700854fd978d58526ec6fff3468caa34ff1c7333b8dc34"},
 ]
 
 [package.dependencies]
@@ -1727,4 +1727,4 @@ celery = ["celery", "flower", "pymongo", "python-dotenv"]
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.8.3"
-content-hash = "b6976589b74ba7f67ff07bdd37e0101cc756bacd3e41b1550b8552bd84c94fd5"
+content-hash = "19cfbe5ad316ee64f5b9bb4c580cbe2adde83e9dd15ee0040fd8dddbee357dea"
