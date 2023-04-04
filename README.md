@@ -26,7 +26,7 @@ Requirements:
 - Aria2 (for Youtube)
 - FFmpeg (for Youtube、BiliBili)
 - Poetry (as package management)
-- Python 3.8+
+- Python 3.8.3+
 
 Setup:
 
