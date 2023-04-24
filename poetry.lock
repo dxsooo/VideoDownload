@@ -88,14 +88,14 @@ lxml = ["lxml"]
 
 [[package]]
 name = "bilix"
-version = "0.15.0"
-description = "⚡️快如闪电的b站视频下载工具，基于Python现代Async异步特性，高速批量下载整部动漫，电视剧，电影，up投稿等"
+version = "0.18.0"
+description = "⚡️Lightning-fast asynchronous download tool for bilibili and more"
 category = "main"
 optional = false
 python-versions = ">=3.8"
 files = [
-    {file = "bilix-0.15.0-py3-none-any.whl", hash = "sha256:78e1e4557fe61097ed33d336a29b74790037d0b150f46a66f11c8eb6d90f1317"},
-    {file = "bilix-0.15.0.tar.gz", hash = "sha256:0f00e1545182ea35166d43b94baefd0c0ca11327bc82e9fd13671a51a481e5f5"},
+    {file = "bilix-0.18.0-py3-none-any.whl", hash = "sha256:2b258df10f51ea42e52e1e956bef7bf1439e379f0a3b73421e6a5bcbc14cd050"},
+    {file = "bilix-0.18.0.tar.gz", hash = "sha256:5e9d648ea1e52e1c4a8124c25ef12bf91f6bd2da1144cc75859f7f437c5c9220"},
 ]
 
 [package.dependencies]
@@ -104,13 +104,13 @@ anyio = "*"
 browser-cookie3 = ">=0.17.1"
 bs4 = "*"
 click = ">=8.0.3"
-danmakuc = ">=0.3.3"
+danmakuc = ">=0.3.5"
 httpx = {version = ">=0.23.3", extras = ["http2"]}
 json5 = "*"
 m3u8 = "*"
 pycryptodome = "*"
 pydantic = "*"
-pyexecjs = "*"
+pymp4 = ">=1.2.0"
 rich = "*"
 
 [package.extras]
@@ -566,6 +566,17 @@ files = [
 ]
 
 [[package]]
+name = "construct"
+version = "2.8.8"
+description = "A powerful declarative parser/builder for binary data"
+category = "main"
+optional = false
+python-versions = "*"
+files = [
+    {file = "construct-2.8.8.tar.gz", hash = "sha256:1b84b8147f6fd15bcf64b737c3e8ac5100811ad80c830cb4b2545140511c4157"},
+]
+
+[[package]]
 name = "coverage"
 version = "7.2.2"
 description = "Code coverage measurement for Python"
@@ -634,48 +645,53 @@ toml = ["tomli"]
 
 [[package]]
 name = "danmakuc"
-version = "0.3.3"
+version = "0.3.5"
 description = "Faster conversion for larger Danmaku to Ass format"
 category = "main"
 optional = false
 python-versions = ">=3.8.3"
 files = [
-    {file = "danmakuC-0.3.3-cp310-cp310-macosx_10_9_x86_64.whl", hash = "sha256:6336ff8b22740aa5574092152d440f87ec6e5ee0a467bc05e85c99aaafe7e2ae"},
-    {file = "danmakuC-0.3.3-cp310-cp310-macosx_11_0_arm64.whl", hash = "sha256:6b17e60a1f7404e400c575628ac0f0df4d29c6227510691248e1255e0726c442"},
-    {file = "danmakuC-0.3.3-cp310-cp310-manylinux_2_17_aarch64.manylinux2014_aarch64.whl", hash = "sha256:058d59d2e96dc12f5611e677821faf8db0fb6121fb21b8aa453273242d467e05"},
-    {file = "danmakuC-0.3.3-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:961897ac8745de4fc3c664e04788b4fac1166823f9a1e58260d3277330c50431"},
-    {file = "danmakuC-0.3.3-cp310-cp310-musllinux_1_1_aarch64.whl", hash = "sha256:6f36ff0db369dc86dc00d9666451680a26f557f1a3695fb0703d3653e71a9b3e"},
-    {file = "danmakuC-0.3.3-cp310-cp310-musllinux_1_1_x86_64.whl", hash = "sha256:a15c033218eb2c66e405970f2cbea231eed322f7b818100fd1ba571b3ce0f537"},
-    {file = "danmakuC-0.3.3-cp310-cp310-win_amd64.whl", hash = "sha256:6f01f659fcd671a42d68e383cbef591de41456de21a6d0dfbce6a3efa8175cd5"},
-    {file = "danmakuC-0.3.3-cp311-cp311-macosx_10_9_x86_64.whl", hash = "sha256:9ff811a3f373b7cd2034b81a9b8f31ffb06bd3c43eadcdefe7f6bc9fb3514b11"},
-    {file = "danmakuC-0.3.3-cp311-cp311-macosx_11_0_arm64.whl", hash = "sha256:3e7bb076a3c6ec4025343e4d062d833b49520710ce85670090ed52078da6bcf6"},
-    {file = "danmakuC-0.3.3-cp311-cp311-manylinux_2_17_aarch64.manylinux2014_aarch64.whl", hash = "sha256:64303bf2f34156368e3d92005c98aecb4ec6c3d014f47f310cb8f520363f5436"},
-    {file = "danmakuC-0.3.3-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:eaa262495f72e57b5c9e43bceb1aaa0249323da691dafe047d6f8131386e36c2"},
-    {file = "danmakuC-0.3.3-cp311-cp311-musllinux_1_1_aarch64.whl", hash = "sha256:6f3f719bc5a2be76e12efee2624d50f3afe661d925eac1ae29e67030d3683a84"},
-    {file = "danmakuC-0.3.3-cp311-cp311-musllinux_1_1_x86_64.whl", hash = "sha256:5de503023e76f6ea87ca3e5d77938efb3ee64261774d8092d7c5b4b24c99a41e"},
-    {file = "danmakuC-0.3.3-cp311-cp311-win_amd64.whl", hash = "sha256:81db0dbcc0e0800e3f93236093464b033cdbe4b1d10b67d51e318324c0ee3372"},
-    {file = "danmakuC-0.3.3-cp38-cp38-macosx_10_9_x86_64.whl", hash = "sha256:f1204ab43a1d20db88b7af1b1be2d289b19b3293fcc6508411cbd38f3e8fbf73"},
-    {file = "danmakuC-0.3.3-cp38-cp38-macosx_11_0_arm64.whl", hash = "sha256:0d7728a364b05ce0226511f222c09ebe05f736ae91b3032d67a1f721ed7de401"},
-    {file = "danmakuC-0.3.3-cp38-cp38-manylinux_2_17_aarch64.manylinux2014_aarch64.whl", hash = "sha256:b368d7015185cff70a1341147518a173a81a1940d4ef8e2b183e36fdc21b98cd"},
-    {file = "danmakuC-0.3.3-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:6dbb923c52c0dff93b79d9a511ae981daf08cf8059e47942e35cd879ad891bd2"},
-    {file = "danmakuC-0.3.3-cp38-cp38-musllinux_1_1_aarch64.whl", hash = "sha256:5f8c6c313ef56a7f67cd4ee21efac6e5387908fc48df81b8ff1691a509ec2dae"},
-    {file = "danmakuC-0.3.3-cp38-cp38-musllinux_1_1_x86_64.whl", hash = "sha256:218a7c7c9a9274613dff22a7cbaaab6306c67bf4323709e965247e0eaa2d437a"},
-    {file = "danmakuC-0.3.3-cp38-cp38-win_amd64.whl", hash = "sha256:fd444d3a60039d8cc7547a33531db0721ea4aa54f606ee5c5aaf9fd168a67ec3"},
-    {file = "danmakuC-0.3.3-cp39-cp39-macosx_10_9_x86_64.whl", hash = "sha256:a1432313268eed03189eb279af1b8fa4f1d945c564fdb6dc6633b81d93e01831"},
-    {file = "danmakuC-0.3.3-cp39-cp39-macosx_11_0_arm64.whl", hash = "sha256:39a58ee26b6105c5abcb6e086ddfa09cc7bb17078d742096ed3628bc0c5c95e1"},
-    {file = "danmakuC-0.3.3-cp39-cp39-manylinux_2_17_aarch64.manylinux2014_aarch64.whl", hash = "sha256:4207cd4554a7c8f17e2c017ea9b6f48771cf2ace93413c8d746df5aa50f1e252"},
-    {file = "danmakuC-0.3.3-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:d413618c412edf40b596354a179d704c3e904defeb174f0f6a81f0fe2f2d3519"},
-    {file = "danmakuC-0.3.3-cp39-cp39-musllinux_1_1_aarch64.whl", hash = "sha256:80ce21b9e19742d4d1b5af2b6b7fd7930ee2bc8fdabaed2f853dc01d27fce1e0"},
-    {file = "danmakuC-0.3.3-cp39-cp39-musllinux_1_1_x86_64.whl", hash = "sha256:0c7061e6a6486d6717e42bde887a028ba3c2dc782ad8876bacd9b2c9014910e7"},
-    {file = "danmakuC-0.3.3-cp39-cp39-win_amd64.whl", hash = "sha256:06cd459de712f42f0c41543b9363e0007257738a5c63944d5b52260fdcb1f389"},
-    {file = "danmakuC-0.3.3-pp38-pypy38_pp73-macosx_10_9_x86_64.whl", hash = "sha256:319800d5c4fe7b60e9878a5c077065049e8aeb0215709019b1f68cb33e465309"},
-    {file = "danmakuC-0.3.3-pp38-pypy38_pp73-manylinux_2_17_aarch64.manylinux2014_aarch64.whl", hash = "sha256:02beff407e15ff51da1b6874f3c225daab9da79b2154d32ce6bb6d42d2f42109"},
-    {file = "danmakuC-0.3.3-pp38-pypy38_pp73-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:a07e40f7d69f48f599d23d7de71dbfb6d746f441a58e709056a48cb1417abe77"},
-    {file = "danmakuC-0.3.3-pp38-pypy38_pp73-win_amd64.whl", hash = "sha256:c9b18fb112c235dd5af0ca42a29206e5ec7d4e8f8f4f470a421b059d63bd5b86"},
-    {file = "danmakuC-0.3.3-pp39-pypy39_pp73-macosx_10_9_x86_64.whl", hash = "sha256:7e5ff1f6e6b8f63aea6fb81786ffe940285d1c74abc5c39f141b88f2bdcbc512"},
-    {file = "danmakuC-0.3.3-pp39-pypy39_pp73-manylinux_2_17_aarch64.manylinux2014_aarch64.whl", hash = "sha256:5daf79e005402cdf0c9d618defd5cf4cd753020dbd77b9e8120a3d54a2d3e475"},
-    {file = "danmakuC-0.3.3-pp39-pypy39_pp73-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:7de5fadb53bbe59d15cd635bd5e50ece1975db9f692ff6924619f3099c0fd659"},
-    {file = "danmakuC-0.3.3-pp39-pypy39_pp73-win_amd64.whl", hash = "sha256:b0d920e5c933828279a32d7ff68f22a57fc8590ffa6e56680d154e7bd0ec8ee8"},
+    {file = "danmakuC-0.3.5-cp310-cp310-macosx_10_9_x86_64.whl", hash = "sha256:f0d3e85218fcb54a7e7d8d6422a38fa36932ce14867362c382c288e4fac6e552"},
+    {file = "danmakuC-0.3.5-cp310-cp310-macosx_11_0_arm64.whl", hash = "sha256:8136ec5e2ead32fb1cd35972de2caf5228f7b90f9062bf6ff692e808135a49cb"},
+    {file = "danmakuC-0.3.5-cp310-cp310-manylinux_2_17_i686.manylinux2014_i686.whl", hash = "sha256:26139bc021d787ef0e8e65a596afc51ab58456868617f749261a8266b75f5772"},
+    {file = "danmakuC-0.3.5-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:db2807295c22e17c23e8135aa79f7a5185ce75ec9a6e5f3c326e2bc9a1de4b09"},
+    {file = "danmakuC-0.3.5-cp310-cp310-musllinux_1_1_i686.whl", hash = "sha256:fcd97133db68259bd91c10c6fc4a484dfeaf5776771e9c5ad6d6804088a1b687"},
+    {file = "danmakuC-0.3.5-cp310-cp310-musllinux_1_1_x86_64.whl", hash = "sha256:023ea3ee4e75ab926f31e116a63246404e058e97fbacdfd58e18d6a4b3494c87"},
+    {file = "danmakuC-0.3.5-cp310-cp310-win32.whl", hash = "sha256:22b1fb1ceed40016d50414621f871d0912fb61db328cf1b29089ec1609630c4f"},
+    {file = "danmakuC-0.3.5-cp310-cp310-win_amd64.whl", hash = "sha256:ec2e1b0f80bde3018f64be492bb8563df641cb2c38078f5706d337b6e9ff82a5"},
+    {file = "danmakuC-0.3.5-cp311-cp311-macosx_10_9_x86_64.whl", hash = "sha256:82ca00e99727b4a059f462d958f77691485ada7df33078144e78f4d6452fad19"},
+    {file = "danmakuC-0.3.5-cp311-cp311-macosx_11_0_arm64.whl", hash = "sha256:e22f67fdd733d0cc592c24ec10b182991bc81a26a3bd9564ae303ece8bdb9136"},
+    {file = "danmakuC-0.3.5-cp311-cp311-manylinux_2_17_i686.manylinux2014_i686.whl", hash = "sha256:4a94bdca7db017a0d1f86464437e6ac044342e313d04b4206ecc44b5f3f4322d"},
+    {file = "danmakuC-0.3.5-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:42ef549a09044b14690a25e92e436c1a344dc2e1bd56945a5a3cec51e9bbd86c"},
+    {file = "danmakuC-0.3.5-cp311-cp311-musllinux_1_1_i686.whl", hash = "sha256:6280cdeeec0cdc2fae2cfa8a08833742c8a55897daf665b6a5aa8c5b2729038d"},
+    {file = "danmakuC-0.3.5-cp311-cp311-musllinux_1_1_x86_64.whl", hash = "sha256:33f51fd2739ba11a30eb03bdff0633b1ea3127da71188231159c7f076ccada64"},
+    {file = "danmakuC-0.3.5-cp311-cp311-win32.whl", hash = "sha256:6fdb6b1dbe0ea9d59b6eddcb4b296a3bd586e8e55464181a712085f7b6505b05"},
+    {file = "danmakuC-0.3.5-cp311-cp311-win_amd64.whl", hash = "sha256:32cf91ab79aeae42f4460c073887899b31e4c26e0474a297cb4e5057941de96a"},
+    {file = "danmakuC-0.3.5-cp38-cp38-macosx_10_9_x86_64.whl", hash = "sha256:814f3b74014340040221461228fd6100d216df3d3fe593d66b3fd71ea5f94a60"},
+    {file = "danmakuC-0.3.5-cp38-cp38-macosx_11_0_arm64.whl", hash = "sha256:e88de10171c66114b5bc0863a38774228c365858ba1676237cbda8843bedf0f9"},
+    {file = "danmakuC-0.3.5-cp38-cp38-manylinux_2_17_i686.manylinux2014_i686.whl", hash = "sha256:f2f34d0b36c9799f92a1b2f902f740450d028bd226c3db96ed9264b06002290b"},
+    {file = "danmakuC-0.3.5-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:1b7452f65a8d218d00e522bf95bb8503cd0ab83883cbe790125c46d3863f0fe7"},
+    {file = "danmakuC-0.3.5-cp38-cp38-musllinux_1_1_i686.whl", hash = "sha256:19c158c5a30fe35f7d9f6650de691cbeb8c667e478c031cce3451cc9da035865"},
+    {file = "danmakuC-0.3.5-cp38-cp38-musllinux_1_1_x86_64.whl", hash = "sha256:65b7dba66d2acfd36067eecded609ee37badc12f245505efb3a72f8428e07201"},
+    {file = "danmakuC-0.3.5-cp38-cp38-win32.whl", hash = "sha256:e6db1e588eb4d78417cdc284480ad714e5b45d2b4cd0c63134deb74417343aab"},
+    {file = "danmakuC-0.3.5-cp38-cp38-win_amd64.whl", hash = "sha256:8d5bc7eb059e88d60b469338f0590730d04efaa03e06d35fdbc03af7754a9abb"},
+    {file = "danmakuC-0.3.5-cp39-cp39-macosx_10_9_x86_64.whl", hash = "sha256:35a89d2a902db272d6e4ed381e131de6010ab2c40e8bfc1083d02daa0bd6f561"},
+    {file = "danmakuC-0.3.5-cp39-cp39-macosx_11_0_arm64.whl", hash = "sha256:77afcc8fc25b3ec041eff142bf9c527cc25f809461a3eb2876e3be791df7a7e8"},
+    {file = "danmakuC-0.3.5-cp39-cp39-manylinux_2_17_i686.manylinux2014_i686.whl", hash = "sha256:116e0585e5f1a07fe6bdb6293e931a75a4d9db1e95876134daefd88764c9c1c8"},
+    {file = "danmakuC-0.3.5-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:c621fa32a39418bfe525ab389a125c0a10177aaf1149724ecc5be361288e2fdf"},
+    {file = "danmakuC-0.3.5-cp39-cp39-musllinux_1_1_i686.whl", hash = "sha256:b1252d4d7a0e9e62d498b21d50fd0943483750381cbd57943b6e6b1fd828d371"},
+    {file = "danmakuC-0.3.5-cp39-cp39-musllinux_1_1_x86_64.whl", hash = "sha256:8757690ec906e2ee031321b5942b53da46a12d06cd23800b66fb9ee04600b9c6"},
+    {file = "danmakuC-0.3.5-cp39-cp39-win32.whl", hash = "sha256:532273e855c32f2c2ea5eb41aae3ed30a3225cb8b5f950836a6f70ebb7fb6301"},
+    {file = "danmakuC-0.3.5-cp39-cp39-win_amd64.whl", hash = "sha256:5b9e2414680736792b682d38501b8c2b6d06801d56ac23f88d61eba7caa2e243"},
+    {file = "danmakuC-0.3.5-pp38-pypy38_pp73-macosx_10_9_x86_64.whl", hash = "sha256:055500222d33e89a1a766988a52981f7e7524c4bbb6c44cf80a0fbfdcd30373f"},
+    {file = "danmakuC-0.3.5-pp38-pypy38_pp73-manylinux_2_17_i686.manylinux2014_i686.whl", hash = "sha256:be8d19aa4879fc3e858c8a89ffa169dbd3289359ceb099a65a08510c460d27ce"},
+    {file = "danmakuC-0.3.5-pp38-pypy38_pp73-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:ed1937c9acf6b785dc2103693726d41e7b60babc11394b0b418c3076f995de2b"},
+    {file = "danmakuC-0.3.5-pp38-pypy38_pp73-win_amd64.whl", hash = "sha256:eeb493431e05eab6b8683e5d10531a1275caae3fc5b45651dfc7e5b57c853a4d"},
+    {file = "danmakuC-0.3.5-pp39-pypy39_pp73-macosx_10_9_x86_64.whl", hash = "sha256:28fd1fd17821d00458eb137af4f65d12c0b486f1e0fd9a4607a27c6e04f9771d"},
+    {file = "danmakuC-0.3.5-pp39-pypy39_pp73-manylinux_2_17_i686.manylinux2014_i686.whl", hash = "sha256:302e63f016b5a676088c0849219a38d501cfd3f47a716d32aed3b5ac092eaf76"},
+    {file = "danmakuC-0.3.5-pp39-pypy39_pp73-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:9526fb96c058b18dcb9e5e20097754ba743dfd332f67499060faddbea90a9c1e"},
+    {file = "danmakuC-0.3.5-pp39-pypy39_pp73-win_amd64.whl", hash = "sha256:0c256e281733e064d9b637d5b8090a0e323e5d2c33c86c177b591e5c93b96b08"},
+    {file = "danmakuC-0.3.5.tar.gz", hash = "sha256:a44cab73bdb2cb935dee027b4e5b4da19372c1bcaddf7398b645e10fb14b6ab2"},
 ]
 
 [package.dependencies]
@@ -1336,20 +1352,6 @@ dotenv = ["python-dotenv (>=0.10.4)"]
 email = ["email-validator (>=1.0.3)"]
 
 [[package]]
-name = "pyexecjs"
-version = "1.5.1"
-description = "Run JavaScript code from Python"
-category = "main"
-optional = false
-python-versions = "*"
-files = [
-    {file = "PyExecJS-1.5.1.tar.gz", hash = "sha256:34cc1d070976918183ff7bdc0ad71f8157a891c92708c00c5fbbff7a769f505c"},
-]
-
-[package.dependencies]
-six = ">=1.10.0"
-
-[[package]]
 name = "pygments"
 version = "2.14.0"
 description = "Pygments is a syntax highlighting package written in Python."
@@ -1458,6 +1460,21 @@ gssapi = ["pykerberos"]
 ocsp = ["certifi", "pyopenssl (>=17.2.0)", "requests (<3.0.0)", "service-identity (>=18.1.0)"]
 snappy = ["python-snappy"]
 zstd = ["zstandard"]
+
+[[package]]
+name = "pymp4"
+version = "1.3.2"
+description = "A Python parser for MP4 boxes"
+category = "main"
+optional = false
+python-versions = "*"
+files = [
+    {file = "pymp4-1.3.2-py2.py3-none-any.whl", hash = "sha256:8bb9d761181fcc5513fa89e0f458855e1a62d56a4ff0139a46b8b377a9e13029"},
+    {file = "pymp4-1.3.2.tar.gz", hash = "sha256:a87cf9adbb9cd9db0f3bd08aeb74fb84356274d6380429630c440d0ae68bd2d5"},
+]
+
+[package.dependencies]
+construct = "2.8.8"
 
 [[package]]
 name = "pytest"
@@ -1587,7 +1604,7 @@ name = "six"
 version = "1.16.0"
 description = "Python 2 and 3 compatibility utilities"
 category = "main"
-optional = false
+optional = true
 python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*"
 files = [
     {file = "six-1.16.0-py2.py3-none-any.whl", hash = "sha256:8abb2f1d86890a2dfb989f9a77cfcfd3e47c2a354b01111771326f8aa26e0254"},
@@ -1812,4 +1829,4 @@ celery = ["celery", "flower", "pymongo", "python-dotenv"]
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.8.3"
-content-hash = "75073962177ceb8dd127d8d94a4e85fac90dad10030d5f3a47948d8894bfec2d"
+content-hash = "eec4536b85fd0899cb04454d3f33b153a172ca759310161a1d7e384795e9f9d1"
