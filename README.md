@@ -159,7 +159,3 @@ Read the source code for more parameters to control task.
 - [Bilix](https://github.com/HFrost0/bilix)
 - [YT-DLP](https://github.com/yt-dlp/yt-dlp)
 - [You-Get](https://github.com/soimort/you-get)
-
-## Related projects
-
-- [ShortVideoCrawl](https://github.com/dxsooo/ShortVideoCrawl): supports short video platforms like kuaishou
