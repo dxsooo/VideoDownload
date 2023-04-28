@@ -4,6 +4,7 @@
 [![GitHub release (latest by date)](https://img.shields.io/github/v/release/dxsooo/VideoDownload?display_name=tag)](https://github.com/dxsooo/VideoDownload/releases/latest)
 [![CodeFactor](https://www.codefactor.io/repository/github/dxsooo/videodownload/badge)](https://www.codefactor.io/repository/github/dxsooo/videodownload)
 [![codecov](https://codecov.io/gh/dxsooo/VideoDownload/branch/master/graph/badge.svg?token=JRPRMK08B5)](https://codecov.io/gh/dxsooo/VideoDownload)
+[![OpenSSF Best Practices](https://bestpractices.coreinfrastructure.org/projects/7265/badge)](https://bestpractices.coreinfrastructure.org/projects/7265)
 [![Docker Pulls](https://img.shields.io/docker/pulls/dxsooo/video-download?logo=docker)](https://hub.docker.com/r/dxsooo/video-download)
 <!-- [![GitHub all releases](https://img.shields.io/github/downloads/dxsooo/VideoDownload/total)]((https://github.com/dxsooo/VideoDownload/releases/latest)) -->
 
