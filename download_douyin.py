@@ -5,7 +5,7 @@ from you_get import common
 
 
 def is_douyin_video(url: str) -> bool:
-    return None != re.match("^https:\/\/www.douyin.com\/video\/[0-9]+$", url)
+    return None != re.match(r"^https://www.douyin.com/video/[0-9]+$", url)
 
 
 def download_douyin_video(url: str, dir: str):

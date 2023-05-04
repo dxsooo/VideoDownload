@@ -5,7 +5,7 @@ from you_get import common
 
 
 def is_ixigua_video(url: str) -> bool:
-    return None != re.match("^https:\/\/www.ixigua.com\/[0-9]+$", url)
+    return None != re.match("^https://www.ixigua.com/[0-9]+$", url)
 
 
 def download_ixigua_video(url: str, dir: str):
