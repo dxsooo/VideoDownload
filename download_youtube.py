@@ -36,7 +36,7 @@ if os.path.exists(YOUTUBE_CONFIG_PATH):
 
 def is_youtube_video(url: str) -> bool:
     return None != re.match(
-        r"^https://www.youtube.com/watch?v=[A-Za-z0-9_\-]+$", url
+        r"^https://www.youtube.com/watch\?v=[A-Za-z0-9_\-]+$", url
     )
 
 
