@@ -69,14 +69,14 @@ lxml = ["lxml"]
 
 [[package]]
 name = "bilix"
-version = "0.18.1"
+version = "0.18.3"
 description = "⚡️Lightning-fast asynchronous download tool for bilibili and more"
 category = "main"
 optional = false
 python-versions = ">=3.8"
 files = [
-    {file = "bilix-0.18.1-py3-none-any.whl", hash = "sha256:1a5a315408786cd2d81fe356604fdcdd0dcf4b5882ddfd4c6be986d76bc02f8a"},
-    {file = "bilix-0.18.1.tar.gz", hash = "sha256:700dce572d23e1a352ac0e9b80bdcd96e0ca56a9e9135c26b77ab061fa437836"},
+    {file = "bilix-0.18.3-py3-none-any.whl", hash = "sha256:d45451dac2c4c9765dd82d55e1fa458fd8e9a1a3c03dda07359d95d11d5c9a16"},
+    {file = "bilix-0.18.3.tar.gz", hash = "sha256:149cfda40d605d88a7687508e843f664ebb8078742f9ede6ae94c87fbd662187"},
 ]
 
 [package.dependencies]
