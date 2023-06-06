@@ -8,7 +8,7 @@
 [![Docker Pulls](https://img.shields.io/docker/pulls/dxsooo/video-download?logo=docker)](https://hub.docker.com/r/dxsooo/video-download)
 <!-- [![GitHub all releases](https://img.shields.io/github/downloads/dxsooo/VideoDownload/total)]((https://github.com/dxsooo/VideoDownload/releases/latest)) -->
 
-VideoDownload tool for *Youtube/BiliBili/douyin/ixigua*
+VideoDownload tool for *Youtube/BiliBili*
 
 - [Basic Usage](#basic-usage)
   - [With source code](#with-source-code)
