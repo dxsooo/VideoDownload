@@ -17,6 +17,7 @@ app = Celery(
     broker=os.getenv("BROKER"),
     backend=os.getenv("BACKEND"),
 )
+app.conf.broker_connection_retry_on_startup = True
 
 
 @app.task
