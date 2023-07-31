@@ -2,7 +2,7 @@ from celery_worker import download
 from config import DOWNLOAD_DIR
 
 test_urls = [
-    "https://www.youtube.com/watch?v=sHFsq-BIhWs",
+    "https://www.youtube.com/watch?v=qRcAjWz84v0",  # Video unavailable
     "https://www.youtube.com/watch?v=_wO522Dgtrk",
     # "https://www.youtube.com/watch?v=pBxN2GjY_08",  # Video unavailable
     "https://www.bilibili.com/video/BV1be4y1X7sq",
