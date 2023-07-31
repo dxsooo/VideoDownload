@@ -15,8 +15,6 @@ Different deps is used for different sources:
 |-|-|
 |Youtube|[YT-DLP](https://github.com/yt-dlp/yt-dlp) + aria2(as external downloader)|
 |BiliBili|[Bilix](https://github.com/HFrost0/bilix)|
-|douyin|[You-Get](https://github.com/soimort/you-get)|
-|ixigua|[You-Get](https://github.com/soimort/you-get)|
 
 The main concern are download speed and the ability of integration.
 
