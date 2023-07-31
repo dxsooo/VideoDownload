@@ -1741,24 +1741,6 @@ files = [
 ]
 
 [[package]]
-name = "you-get"
-version = "0.4.1650"
-description = "Dumb downloader that scrapes the web"
-optional = false
-python-versions = "*"
-files = []
-develop = false
-
-[package.extras]
-socks = ["PySocks"]
-
-[package.source]
-type = "git"
-url = "https://github.com/soimort/you-get.git"
-reference = "develop"
-resolved_reference = "9f38d7d76f2df34fa1bd72b826c5248a3aba67d3"
-
-[[package]]
 name = "yt-dlp"
 version = "2023.7.6"
 description = "A youtube-dl fork with additional features and patches"
@@ -1783,4 +1765,4 @@ celery = ["celery", "flower", "pymongo", "python-dotenv"]
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.8.3"
-content-hash = "5609e30d1f32bdbd8feafa3e0b826988c88c94580881e97d54ce16968cee9ae4"
+content-hash = "edb82a6b48550e2f39864f55c40eadf1ac8e11a000a76db593c53b112fa06e89"
