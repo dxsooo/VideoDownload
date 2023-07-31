@@ -55,11 +55,6 @@ VideoURL is the video playing url and the url pattern should follow:
 |-|-|
 |Youtube|<https://www.youtube.com/watch?v=xxxx>|
 |BiliBili|<https://www.bilibili.com/video/BVxxxx> or <http://www.bilibili.com/video/avxxxx> |
-|~~douyin~~|~~<https://www.douyin.com/video/xxxx>~~|
-|~~ixigua~~|~~<https://www.ixigua.com/xxxx>~~|
-
-> douyin is not supported right now (2023.4)  
-> ixigua is not supported because <https://github.com/soimort/you-get/pull/3001> is not merged (2023.4)
 
 The video is saved in `videos/` of the current path and named with video id.
 
@@ -80,7 +75,7 @@ options:
 You can easily download video by docker:
 
 ```bash
-docker run -t -v/path/to/save:/app/videos dxsooo/video-download:0.4.6 download.py -u <VideoURL>
+docker run -t -v/path/to/save:/app/videos dxsooo/video-download:0.4.7 download.py -u <VideoURL>
 ```
 
 ## Additional Configuration
@@ -107,7 +102,7 @@ docker run -d --name video-downloader-1 \
     -e BACKEND=${YOUR_CELERY_BACKEND} \
     -v /path/to/save:/app/videos \
     --entrypoint=celery \
-    dxsooo/video-download:0.4.6 -A celery_worker worker -c 4
+    dxsooo/video-download:0.4.7 -A celery_worker worker -c 4 -E
 ```
 
 > For BiliBili, as some deps could not run with multi process, concurrency(-c) should be 1. But it is ok to run multi docker containers to walk around.
@@ -133,7 +128,7 @@ docker run -d --name video-downloader-flower \
     -e BACKEND=${YOUR_CELERY_BACKEND} \
     --entrypoint=celery \
     -p 5555:5555 \
-    dxsooo/video-download:0.4.6 -A celery_worker flower
+    dxsooo/video-download:0.4.7 -A celery_worker flower
 ```
 
 Example request:
@@ -158,4 +153,3 @@ Read the source code for more parameters to control task.
 
 - [Bilix](https://github.com/HFrost0/bilix)
 - [YT-DLP](https://github.com/yt-dlp/yt-dlp)
-- [You-Get](https://github.com/soimort/you-get)
