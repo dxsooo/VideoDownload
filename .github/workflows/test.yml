@@ -31,4 +31,4 @@ jobs:
         run: pytest --cov --suppress-tests-failed-exit-code
 
       - name: Upload coverage to Codecov
-        uses: codecov/codecov-action@v3
+        uses: codecov/codecov-action@v4
