@@ -1,4 +1,4 @@
-FROM python:3.11-alpine as poetry
+FROM python:3.12-alpine as poetry
 
 WORKDIR /root
 
@@ -11,7 +11,7 @@ COPY pyproject.toml poetry.lock ./
 RUN poetry export -E celery -o requirements.txt
 
 # app
-FROM python:3.11-slim
+FROM python:3.12-slim
 
 RUN apt-get -qq update && \
     apt-get install -qqy --no-install-recommends aria2 ffmpeg && \
