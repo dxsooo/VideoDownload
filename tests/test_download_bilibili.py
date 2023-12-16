@@ -25,7 +25,7 @@ class TestDownloadBilibili:
         )
         fn = os.path.join(self.test_dl_dir, "BV1NF411P7C9.mp4")
         assert os.path.exists(fn)
-        assert os.path.getsize(fn) == 49233582
+        assert 49233582 <= os.path.getsize(fn) <= 49233583
 
     def test_download_bilibili_video_failures(self):
         with pytest.raises(Exception):

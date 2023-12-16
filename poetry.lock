@@ -1921,4 +1921,4 @@ celery = ["celery", "flower", "pymongo", "python-dotenv"]
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.8.3"
-content-hash = "0ed716b78c120784562679b4731cccbcedd94ab15040dfeb051cae87e2eb6663"
+content-hash = "c50307a22c650f5ec0fbbe4e9c8bc84ee592d05fc62b41a3210082d18cf5cf03"
