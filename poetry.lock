@@ -1896,13 +1896,13 @@ files = [
 
 [[package]]
 name = "yt-dlp"
-version = "2023.11.16"
+version = "2023.12.30"
 description = "A youtube-dl fork with additional features and patches"
 optional = false
-python-versions = ">=3.7"
+python-versions = ">=3.8"
 files = [
-    {file = "yt-dlp-2023.11.16.tar.gz", hash = "sha256:f0ccdaf12e08b15902601a4671c7ab12906d7b11de3ae75fa6506811c24ec5da"},
-    {file = "yt_dlp-2023.11.16-py2.py3-none-any.whl", hash = "sha256:0322ba85aa4afdb75f8641ed550e5958964daff034aeb477abb15031fd9a51ed"},
+    {file = "yt-dlp-2023.12.30.tar.gz", hash = "sha256:a11862e57721b0a0f0883dfeb5a4d79ba213a2d4c45e1880e9fd70f8e6570c38"},
+    {file = "yt_dlp-2023.12.30-py2.py3-none-any.whl", hash = "sha256:c00d9a71d64472ad441bcaa1ec0c3797d6e60c9f934f270096a96fe51657e7b3"},
 ]
 
 [package.dependencies]
@@ -1913,7 +1913,7 @@ mutagen = "*"
 pycryptodomex = "*"
 requests = ">=2.31.0,<3"
 urllib3 = ">=1.26.17,<3"
-websockets = "*"
+websockets = ">=12.0"
 
 [extras]
 celery = ["celery", "flower", "pymongo", "python-dotenv"]
