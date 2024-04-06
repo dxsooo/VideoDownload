@@ -5,7 +5,7 @@ from download_bilibili import download_bilibili_video, is_bilibili_video
 from download_youtube import download_youtube_video, is_youtube_video
 
 
-def download(url, dir):
+def download(url: str, dir: str):
     if is_youtube_video(url):
         download_youtube_video(url, dir)
     elif is_bilibili_video(url):

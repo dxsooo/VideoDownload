@@ -2,6 +2,8 @@ import asyncio
 import glob
 import os
 import re
+from pathlib import Path
+from typing import Optional
 
 import bilix.sites.bilibili.api as api
 from bilix.sites.bilibili.downloader import DownloaderBilibili
@@ -21,7 +23,7 @@ def download_bilibili_video(url: str, dir: str):
     )
 
 
-def get_id(url: str) -> str | None:
+def get_id(url: str) -> Optional[str]:
     se = re.search(r"(BV[a-zA-z0-9]+)$", url)
     if se != None:
         return se.group(0)
@@ -33,7 +35,7 @@ def get_id(url: str) -> str | None:
     return None
 
 
-async def _download_video(url, bdl, videos_dir):
+async def _download_video(url: str, bdl: DownloaderBilibili, videos_dir: str):
     # get bvid/avid from url to rename later
     name = get_id(url)
     if name is None:
@@ -45,7 +47,7 @@ async def _download_video(url, bdl, videos_dir):
         # print(video_info.pages[video_info.p].p_name)
         video_info.pages[video_info.p].p_name = name
 
-        await bdl.get_video(url, path=videos_dir, video_info=video_info)
+        await bdl.get_video(url, path=Path(videos_dir), video_info=video_info)
         out_vs = glob.glob(os.path.join(videos_dir, "*-" + name + ".mp4"))
         if len(out_vs) == 0:
             raise Exception(f"Failed to get video in {url}")
