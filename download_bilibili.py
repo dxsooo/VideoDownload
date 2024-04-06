@@ -21,17 +21,24 @@ def download_bilibili_video(url: str, dir: str):
     )
 
 
-def get_id(url: str) -> str:
+def get_id(url: str) -> str | None:
     se = re.search(r"(BV[a-zA-z0-9]+)$", url)
     if se != None:
         return se.group(0)
-    else:
-        return re.search(r"(av[0-9]+)$", url).group(0)
+
+    se = re.search(r"(av[0-9]+)$", url)
+    if se != None:
+        return se.group(0)
+
+    return None
 
 
 async def _download_video(url, bdl, videos_dir):
     # get bvid/avid from url to rename later
     name = get_id(url)
+    if name is None:
+        raise Exception(f"Failed to get video id in {url}")
+
     try:
         # hack video info to set name
         video_info = await api.get_video_info(bdl.client, url)
