@@ -16,7 +16,7 @@ flower = {version = "^2.0.0", optional = true}
 [tool.poetry.group.dev.dependencies]
 black = {version = "^24.0.0", allow-prereleases = true}
 pytest = "^8.0.0"
-pytest-cov = "^4.0.0"
+pytest-cov = "^5.0.0"
 pytest-custom-exit-code = "^0.3.0"
 
 [tool.pytest.ini_options]
