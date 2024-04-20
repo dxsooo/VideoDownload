@@ -16,7 +16,7 @@ services:
       RABBITMQ_DEFAULT_PASS: admin
 
   mongo:
-    image: mongo:4.0
+    image: mongo:7.0
     volumes:
       - ./data/mongo:/data/db
     ports:
