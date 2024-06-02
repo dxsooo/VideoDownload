@@ -14,7 +14,7 @@ RUN poetry export -E celery -o requirements.txt
 FROM python:3.12-slim
 
 RUN apt-get -qq update && \
-    apt-get install -qqy --no-install-recommends aria2 ffmpeg && \
+    apt-get install -qqy --no-install-recommends g++ aria2 ffmpeg && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/*
 
