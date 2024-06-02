@@ -3,6 +3,8 @@ name = "videodownload"
 version = "0.1.0"
 description = ""
 authors = ["dxsooo <zeohan.dxs@gmail.com>"]
+package-mode = false
+
 
 [tool.poetry.dependencies]
 python = "^3.8.3"
