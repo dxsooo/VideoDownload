@@ -3,7 +3,7 @@ version: "3.9"
 services:
 
   rabbitmq:
-    image: rabbitmq:3-management-alpine
+    image: rabbitmq:4-management-alpine
     volumes:
       - ./data/rabbitmq/:/var/lib/rabbitmq/
       - ./rabbitmq.conf:/etc/rabbitmq/rabbitmq.conf
