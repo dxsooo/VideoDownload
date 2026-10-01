@@ -31,7 +31,7 @@ jobs:
         run: pytest --cov --suppress-tests-failed-exit-code
 
       - name: Upload coverage to Codecov
-        uses: codecov/codecov-action@v4
+        uses: codecov/codecov-action@v7
         with:
           fail_ci_if_error: true # optional (default = false)
           token: ${{ secrets.CODECOV_TOKEN }} # required
